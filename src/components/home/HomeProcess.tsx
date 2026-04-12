@@ -37,7 +37,7 @@ export default function HomeProcess() {
       
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="text-center mb-16">
-          <span className="text-orange-500 font-bold tracking-wider uppercase text-sm">How We Operate</span>
+          <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-blue-200 font-bold tracking-wider uppercase text-sm">How We Operate</span>
           <h2 className="text-3xl md:text-5xl font-extrabold text-white mt-3">A Seamless Process</h2>
         </div>
 
@@ -52,9 +52,9 @@ export default function HomeProcess() {
               className="relative text-center lg:text-left group"
             >
               {/* Step indicator node */}
-              <div className="w-20 h-20 mx-auto lg:mx-0 bg-slate-800 border-4 border-slate-900 rounded-full flex items-center justify-center text-white relative z-10 group-hover:bg-orange-500 transition-colors shadow-2xl shadow-slate-900 mb-8">
+              <div className="w-20 h-20 mx-auto lg:mx-0 bg-slate-800 border-4 border-slate-900 rounded-full flex items-center justify-center text-blue-400 relative z-10 group-hover:bg-gradient-to-r group-hover:from-blue-600 group-hover:to-blue-400 group-hover:text-white transition-all duration-500 shadow-2xl shadow-slate-900 mb-8 transform group-hover:scale-110 group-hover:shadow-[0_0_20px_rgba(59,130,246,0.4)]">
                 <step.icon className="w-8 h-8" />
-                <div className="absolute -top-3 -right-3 w-8 h-8 bg-white text-slate-900 rounded-full flex items-center justify-center font-bold text-sm shadow-md">
+                <div className="absolute -top-3 -right-3 w-8 h-8 bg-slate-700 text-blue-100 rounded-full flex items-center justify-center font-bold text-sm shadow-md border-2 border-slate-900 group-hover:bg-white group-hover:text-blue-600 transition-colors duration-500">
                   {step.num}
                 </div>
               </div>

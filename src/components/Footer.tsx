@@ -1,89 +1,171 @@
+
+
+"use client";
+
 import Link from "next/link";
-import { Truck, Mail, Phone, MapPin } from "lucide-react";
+import { Truck, Mail, Phone, MapPin, ArrowRight } from "lucide-react";
+import { motion } from "framer-motion";
 
 export default function Footer() {
+  const quickLinks = [
+    { name: "Home", href: "/" },
+    { name: "About", href: "/about" },
+    { name: "Services", href: "/services" },
+    { name: "FAQs", href: "/faq" },
+  ];
+
+  const services = [
+    "Road Freight",
+    "Ocean Freight",
+    "Air Transport",
+    "Warehousing",
+    "Supply Chain",
+    "Last Mile Delivery",
+  ];
+
   return (
-    <footer className="bg-slate-900 text-slate-300">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+    <footer className="bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-slate-300 relative overflow-hidden">
+      {/* Decorative background element */}
+      <div className="absolute inset-0 bg-gradient-to-r from-blue-500/5 to-transparent pointer-events-none" />
+
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 relative z-10">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
-          {/* Brand */}
-          <div className="space-y-6">
+          {/* Brand Section */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}
+            className="space-y-6"
+          >
             <Link href="/" className="flex items-center gap-2 group inline-block">
-              <div className="bg-orange-500 p-2 rounded-lg">
-                <Truck className="h-6 w-6 text-white" />
-              </div>
+
               <span className="font-bold text-2xl text-white tracking-tight">
-                HROX <span className="text-orange-500">Logistics</span>
+                HROX <span className="bg-gradient-to-r from-blue-400 to-blue-500 bg-clip-text text-transparent">Logistics</span>
               </span>
             </Link>
             <p className="text-slate-400 leading-relaxed">
-              Delivering excellence across the globe. Reliable, fast, and secure logistics solutions tailored to your business needs.
-            </p>
-            <div className="flex gap-4">
-              <a href="#" className="text-slate-400 hover:text-orange-500 transition-colors font-semibold">FB</a>
-              <a href="#" className="text-slate-400 hover:text-orange-500 transition-colors font-semibold">TW</a>
-              <a href="#" className="text-slate-400 hover:text-orange-500 transition-colors font-semibold">IN</a>
-              <a href="#" className="text-slate-400 hover:text-orange-500 transition-colors font-semibold">IG</a>
-            </div>
-          </div>
+              Delivering excellence across the globe with precision and care. As a trusted leader in logistics and supply chain management, we provide reliable, fast, and secure solutions tailored to meet your unique business needs. </p>
+          </motion.div>
 
           {/* Quick Links */}
-          <div>
-            <h3 className="text-white font-semibold text-lg mb-6">Quick Links</h3>
-            <ul className="space-y-4">
-              {["Home", "About Us", "Services", "Track Shipment", "Contact", "FAQ"].map((item, idx) => (
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.1 }}
+          >
+            <h3 className="text-white font-semibold text-lg mb-6 relative inline-block">
+              Quick Links
+              <div className="absolute -bottom-2 left-0 w-25 h-0.5 bg-blue-500 rounded-full" />
+            </h3>
+            <ul className="space-y-3">
+              {quickLinks.map((item, idx) => (
                 <li key={idx}>
-                  <Link href={item === "Home" ? "/" : `/${item.toLowerCase().replace(" ", "-")}`} className="hover:text-orange-500 transition-colors flex items-center gap-2 group">
-                    <span className="w-1.5 h-1.5 rounded-full bg-orange-500 opacity-0 group-hover:opacity-100 transition-opacity"></span>
-                    {item}
+                  <Link
+                    href={item.href}
+                    className="group flex items-center gap-2 text-slate-400 hover:text-blue-400 transition-all duration-300"
+                  >
+                    <ArrowRight className="h-3.5 w-3.5 opacity-0 group-hover:opacity-100 group-hover:translate-x-1 transition-all duration-300" />
+                    <span className="group-hover:translate-x-1 transition-transform duration-300">
+                      {item.name}
+                    </span>
                   </Link>
                 </li>
               ))}
             </ul>
-          </div>
+          </motion.div>
 
           {/* Services */}
-          <div>
-            <h3 className="text-white font-semibold text-lg mb-6">Our Services</h3>
-            <ul className="space-y-4">
-              {["Road Freight", "Ocean Freight", "Air Transport", "Warehousing", "Supply Chain", "Last Mile Delivery"].map((item, idx) => (
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.2 }}
+          >
+            <h3 className="text-white font-semibold text-lg mb-6 relative inline-block">
+              Our Services
+              <div className="absolute -bottom-2 left-0 w-28 h-0.5 bg-blue-500 rounded-full" />
+            </h3>
+            <ul className="space-y-3">
+              {services.map((item, idx) => (
                 <li key={idx}>
-                  <Link href="/services" className="hover:text-orange-500 transition-colors flex items-center gap-2 group">
-                    <span className="w-1.5 h-1.5 rounded-full bg-orange-500 opacity-0 group-hover:opacity-100 transition-opacity"></span>
-                    {item}
+                  <Link
+                    href="/services"
+                    className="group flex items-center gap-2 text-slate-400 hover:text-blue-400 transition-all duration-300"
+                  >
+                    <div className="w-1.5 h-1.5 rounded-full bg-blue-500 opacity-0 group-hover:opacity-100 transition-all duration-300" />
+                    <span>{item}</span>
                   </Link>
                 </li>
               ))}
             </ul>
-          </div>
+          </motion.div>
 
           {/* Contact Info */}
-          <div>
-            <h3 className="text-white font-semibold text-lg mb-6">Contact Us</h3>
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.3 }}
+          >
+            <h3 className="text-white font-semibold text-lg mb-6 relative inline-block">
+              Contact Us
+              <div className="absolute -bottom-2 left-0 w-24 h-0.5 bg-blue-500 rounded-full" />
+            </h3>
             <ul className="space-y-4">
-              <li className="flex items-start gap-4">
-                <MapPin className="h-6 w-6 text-orange-500 shrink-0 mt-0.5" />
-                <span>123 Logistics Ave, Business Bay,<br />New York, NY 10001</span>
-              </li>
-              <li className="flex items-center gap-4">
-                <Phone className="h-6 w-6 text-orange-500 shrink-0" />
-                <span>+1 (555) 123-4567</span>
-              </li>
-              <li className="flex items-center gap-4">
-                <Mail className="h-6 w-6 text-orange-500 shrink-0" />
-                <span>info@hroxlogistics.com</span>
-              </li>
+              <motion.li
+                whileHover={{ x: 5 }}
+                className="flex items-start gap-4 group"
+              >
+                <MapPin className="h-5 w-5 text-blue-500 shrink-0 mt-0.5 transition-colors group-hover:text-blue-400" />
+                <span className="text-slate-400 group-hover:text-slate-300 transition-colors">
+                  1309 Coffeen Avenue STE 1200 Sheridan, Wyoming 82801
+                </span>
+              </motion.li>
+              <motion.li
+                whileHover={{ x: 5 }}
+                className="flex items-center gap-4 group"
+              >
+                <Phone className="h-5 w-5 text-blue-500 shrink-0 transition-colors group-hover:text-blue-400" />
+                <span className="text-slate-400 group-hover:text-slate-300 transition-colors">
+                  +1 (555) 123-4567
+                </span>
+              </motion.li>
+              <motion.li
+                whileHover={{ x: 5 }}
+                className="flex items-center gap-4 group"
+              >
+                <Mail className="h-5 w-5 text-blue-500 shrink-0 transition-colors group-hover:text-blue-400" />
+                <span className="text-slate-400 group-hover:text-slate-300 transition-colors">
+                  hroxlogistics@gmail.com
+                </span>
+              </motion.li>
             </ul>
-          </div>
+          </motion.div>
         </div>
 
-        <div className="border-t border-slate-800 mt-16 pt-8 text-center text-slate-500 text-sm flex flex-col md:flex-row justify-between items-center gap-4">
+        {/* Bottom Bar */}
+        <motion.div
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          transition={{ duration: 0.5, delay: 0.4 }}
+          className="border-t border-slate-800/50 mt-16 pt-8 text-center text-slate-500 text-sm flex flex-col md:flex-row justify-between items-center gap-4"
+        >
           <p>&copy; {new Date().getFullYear()} HROX Logistics. All rights reserved.</p>
           <div className="flex gap-6">
-            <Link href="#" className="hover:text-slate-300 transition-colors">Privacy Policy</Link>
-            <Link href="#" className="hover:text-slate-300 transition-colors">Terms of Service</Link>
+            <Link
+              href="#"
+              className="hover:text-blue-400 transition-all duration-300 relative group"
+            >
+              Privacy Policy
+              <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-blue-500 group-hover:w-full transition-all duration-300" />
+            </Link>
+            <Link
+              href="#"
+              className="hover:text-blue-400 transition-all duration-300 relative group"
+            >
+              Terms of Service
+              <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-blue-500 group-hover:w-full transition-all duration-300" />
+            </Link>
           </div>
-        </div>
+        </motion.div>
       </div>
     </footer>
   );
