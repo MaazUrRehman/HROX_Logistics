@@ -12,10 +12,10 @@ export default function AboutPage() {
       <AboutHeader />
       <CompanyIntro />
       <BusinessValues />
-      <AboutCTA />
-      <CoreValues />
       <OurStory />
+      <CoreValues />
       <ExperienceExpertise />
+      <AboutCTA />
     </div>
   );
 }

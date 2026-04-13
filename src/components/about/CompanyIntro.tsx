@@ -29,10 +29,8 @@ export default function CompanyIntro() {
   ];
 
   const stats = [
-    { value: "50+", label: "Countries", icon: Globe, delay: 0.1 },
     { value: "99.9%", label: "On-Time Delivery", icon: Clock, delay: 0.2 },
     { value: "24/7", label: "Support", icon: Zap, delay: 0.3 },
-    { value: "500+", label: "Team Members", icon: Users, delay: 0.4 }
   ];
 
   return (
@@ -103,16 +101,7 @@ export default function CompanyIntro() {
           transition={{ duration: 0.8 }}
           className="text-center mb-16"
         >
-          <motion.div
-            initial={{ scale: 0, rotate: -180 }}
-            whileInView={{ scale: 1, rotate: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6, type: "spring" }}
-            className="inline-flex items-center gap-2 bg-gradient-to-r from-blue-500 to-blue-600 text-white px-4 py-2 rounded-full mb-6 shadow-lg"
-          >
-            <Building2 className="w-4 h-4" />
-            <span className="text-sm font-semibold">Company Introduction</span>
-          </motion.div>
+          
           
           <motion.h2 
             initial={{ opacity: 0, y: 20 }}
@@ -321,29 +310,7 @@ export default function CompanyIntro() {
               </div>
             </motion.div>
 
-            {/* CTA Button */}
-            <motion.div 
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: 0.8 }}
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-              className="text-center"
-            >
-              <Link 
-                href="/about" 
-                className="group inline-flex items-center gap-2 bg-gradient-to-r from-blue-600 to-blue-500 hover:from-blue-700 hover:to-blue-600 text-white px-8 py-3.5 rounded-xl font-bold transition-all duration-300 shadow-lg hover:shadow-xl hover:shadow-blue-500/30"
-              >
-                Learn More About Us
-                <motion.div
-                  animate={{ x: [0, 5, 0] }}
-                  transition={{ duration: 1.5, repeat: Infinity, ease: "easeInOut" }}
-                >
-                  <ArrowRight className="w-5 h-5" />
-                </motion.div>
-              </Link>
-            </motion.div>
+            
           </motion.div>
 
         </div>
