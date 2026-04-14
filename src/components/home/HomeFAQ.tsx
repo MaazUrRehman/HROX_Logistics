@@ -31,7 +31,7 @@ export default function HomeFAQ() {
   const [openIndex, setOpenIndex] = useState<number | null>(0);
 
   return (
-    <section className="py-24 bg-gradient-to-br from-blue-200/50 via-white to-blue-100/30 relative overflow-hidden">
+    <section id="faq-section"  className="py-24 bg-gradient-to-br from-blue-200/50 via-white to-blue-100/30 relative overflow-hidden">
       {/* Decorative Elements */}
       <div className="absolute top-0 right-0 w-full h-full overflow-hidden pointer-events-none">
         <div className="absolute -top-20 -right-20 w-[500px] h-[500px] bg-white rounded-full blur-[100px] opacity-60" />

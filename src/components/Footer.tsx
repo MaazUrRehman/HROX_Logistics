@@ -11,7 +11,7 @@ export default function Footer() {
     { name: "Home", href: "/" },
     { name: "About", href: "/about" },
     { name: "Services", href: "/services" },
-    { name: "FAQs", href: "/faq" },
+    { name: "FAQs", href: "/#faq-section" },
   ];
 
   const services = [
@@ -146,25 +146,9 @@ export default function Footer() {
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           transition={{ duration: 0.5, delay: 0.4 }}
-          className="border-t border-slate-800/50 mt-16 pt-8 text-center text-slate-500 text-sm flex flex-col md:flex-row justify-between items-center gap-4"
+          className="border-t border-slate-800/50 justify-center mt-16 pt-8 text-center text-slate-500 text-sm flex flex-col md:flex-row justify-between items-center gap-4"
         >
           <p>&copy; {new Date().getFullYear()} HROX Logistics. All rights reserved.</p>
-          <div className="flex gap-6">
-            <Link
-              href="#"
-              className="hover:text-blue-400 transition-all duration-300 relative group"
-            >
-              Privacy Policy
-              <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-blue-500 group-hover:w-full transition-all duration-300" />
-            </Link>
-            <Link
-              href="#"
-              className="hover:text-blue-400 transition-all duration-300 relative group"
-            >
-              Terms of Service
-              <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-blue-500 group-hover:w-full transition-all duration-300" />
-            </Link>
-          </div>
         </motion.div>
       </div>
     </footer>

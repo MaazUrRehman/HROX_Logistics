@@ -59,7 +59,7 @@ export default function AboutHeader() {
             className="text-4xl md:text-6xl lg:text-7xl font-extrabold text-white mb-6 leading-tight"
           >
             About{" "}
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-200 via-white to-blue-100">
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-300 via-blue-200 to-blue-400">
               HROX Logistics
             </span>
           </motion.h1>
