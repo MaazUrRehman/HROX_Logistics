@@ -70,7 +70,7 @@ export default function CompanyIntro() {
             key={i}
             className="absolute w-1 h-1 bg-blue-400/40 rounded-full"
             initial={{ 
-              x: Math.random() * window.innerWidth,
+              x: Math.random() * 500,
               y: Math.random() * 1000,
               opacity: 0
             }}
