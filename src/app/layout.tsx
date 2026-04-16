@@ -16,7 +16,7 @@ export const metadata: Metadata = {
   title: "HROX Logistics ",
   description: "HROX Logistics provides reliable, fast, and secure logistics solutions tailored to your business needs.",
   icons: {
-    icon: "/hrox_logo.png", // ✅ your actual file name
+    icon: "/hrox_logo_ship.png", // ✅ your actual file name
   },
 };
 
