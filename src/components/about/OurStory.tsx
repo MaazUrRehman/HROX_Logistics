@@ -5,8 +5,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Compass, Target, Globe, Award, ArrowRight, Clock, Shield, TrendingUp } from "lucide-react";
-import Link from "next/link";
+import { Target, Globe, Shield } from "lucide-react";
 
 export default function OurStory() {
   return (
@@ -57,7 +56,7 @@ export default function OurStory() {
           >
             More Than Just{" "}
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-blue-500">
-              Logistics
+              Dispatching
             </span>
           </motion.h2>
           <motion.p 
@@ -67,7 +66,7 @@ export default function OurStory() {
             transition={{ delay: 0.2 }}
             className="text-lg text-slate-600 max-w-3xl mx-auto"
           >
-            A story of innovation, dedication, and global connectivity
+            A carrier-focused approach to communication, planning, and paperwork
           </motion.p>
         </div>
 
@@ -92,9 +91,9 @@ export default function OurStory() {
                 </div>
               </div>
               <p className="text-slate-600 leading-relaxed text-lg">
-                Founded with a vision to simplify complex global trade networks, HROX Logistics has grown 
-                from a regional transporter to an international powerhouse. We recognized early on that 
-                conventional shipping wasn't enough; modern businesses needed transparency, speed, and agility.
+                HROX Dispatchers was built to support carriers who need more than basic load searches.
+                We focus on dependable communication, practical lane planning, broker follow-up, and
+                paperwork organization so owner-operators and small fleets can run with more clarity.
               </p>
             </div>
 
@@ -110,8 +109,8 @@ export default function OurStory() {
                 </div>
               </div>
               <p className="text-slate-600 leading-relaxed text-lg">
-                To provide secure, efficient, and technologically advanced logistics operations that 
-                empower businesses to scale locally and globally seamlessly. Your growth is our core objective.
+                To provide professional dispatch support that helps carriers reduce confusion, protect
+                time, improve documentation, and make smarter decisions in a changing freight market.
               </p>
             </div>
 
@@ -128,7 +127,7 @@ export default function OurStory() {
             <div className="relative rounded-3xl overflow-hidden shadow-2xl h-[500px] group">
               <img 
                 src="https://images.unsplash.com/photo-1578575437130-527eed3abbec?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80" 
-                alt="Logistics team" 
+                alt="Truck dispatch team" 
                 className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
               />
               {/* Gradient Overlay */}
@@ -147,8 +146,8 @@ export default function OurStory() {
                     <Shield className="w-5 h-5 text-white" />
                   </div>
                   <div className="flex-1">
-                    <p className="text-slate-900 font-semibold text-sm">Trusted by Industry Leaders</p>
-                    <p className="text-slate-500 text-xs">ISO Certified & Customs Compliant</p>
+                    <p className="text-slate-900 font-semibold text-sm">Trusted Carrier Support</p>
+                    <p className="text-slate-500 text-xs">Dispatch, paperwork, and load coordination</p>
                   </div>
                 </div>
               </motion.div>

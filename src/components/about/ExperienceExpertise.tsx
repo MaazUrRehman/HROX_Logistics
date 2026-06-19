@@ -2,7 +2,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Award, Shield, Zap, TrendingUp, CheckCircle2, ArrowRight, Star, ThumbsUp } from "lucide-react";
+import { Award, Shield, CheckCircle2, ArrowRight, Star, ThumbsUp } from "lucide-react";
 import Link from "next/link";
 
 export default function ExperienceExpertise() {
@@ -68,7 +68,7 @@ export default function ExperienceExpertise() {
             >
               Your Trusted{" "}
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-300">
-                Logistics Partner
+                Dispatch Partner
               </span>
             </motion.h2>
             
@@ -79,9 +79,9 @@ export default function ExperienceExpertise() {
               transition={{ delay: 0.2 }}
               className="text-lg text-slate-300 leading-relaxed"
             >
-              With over two decades of excellence in logistics, we've built a reputation for reliability, 
-              transparency, and unmatched expertise. Our team of certified professionals ensures your 
-              cargo reaches its destination safely and on time.
+              We support trucking carriers with reliable communication, practical load coordination,
+              and organized paperwork follow-up. Our role is to help drivers and fleet owners stay
+              focused while dispatch details are handled professionally.
             </motion.p>
 
             {/* Trust Badges */}
@@ -93,9 +93,9 @@ export default function ExperienceExpertise() {
               className="space-y-4 pt-4"
             >
               {[
-                { icon: Shield, text: "ISO 9001:2021 Certified", color: "from-blue-500 to-cyan-500" },
-                { icon: ThumbsUp, text: "98% Customer Satisfaction Rate", color: "from-indigo-500 to-blue-500" },
-                { icon: CheckCircle2, text: "100% Customs Compliance Record", color: "from-cyan-500 to-blue-500" }
+                { icon: Shield, text: "Carrier Documentation Support", color: "from-blue-500 to-cyan-500" },
+                { icon: ThumbsUp, text: "Responsive Dispatch Communication", color: "from-indigo-500 to-blue-500" },
+                { icon: CheckCircle2, text: "Broker and Appointment Coordination", color: "from-cyan-500 to-blue-500" }
               ].map((item, idx) => (
                 <div key={idx} className="flex items-center gap-3 group">
                   <div className={`w-10 h-10 bg-gradient-to-br ${item.color} rounded-lg flex items-center justify-center shrink-0 group-hover:scale-110 transition-transform duration-300`}>
@@ -140,13 +140,13 @@ export default function ExperienceExpertise() {
               >
                 <img 
                   src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80"
-                  alt="Professional logistics team"
+                  alt="Professional truck dispatch team"
                   className="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-700"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-transparent to-transparent" />
                 <div className="absolute bottom-4 left-4 right-4">
-                  <p className="text-white font-semibold text-sm">Expert Team at Work</p>
-                  <p className="text-slate-300 text-xs">500+ Certified Professionals</p>
+                  <p className="text-white font-semibold text-sm">Dispatch Team at Work</p>
+                  <p className="text-slate-300 text-xs">Carrier support and load coordination</p>
                 </div>
               </motion.div>
 
@@ -163,8 +163,8 @@ export default function ExperienceExpertise() {
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-transparent to-transparent" />
                 <div className="absolute bottom-3 left-3 right-3">
-                  <p className="text-white font-semibold text-xs">300+ Warehouses</p>
-                  <p className="text-slate-300 text-xs">Global Network</p>
+                  <p className="text-white font-semibold text-xs">Warehouse Freight</p>
+                  <p className="text-slate-300 text-xs">Appointment coordination</p>
                 </div>
               </motion.div>
 
@@ -176,13 +176,13 @@ export default function ExperienceExpertise() {
               >
                 <img 
                   src="https://images.unsplash.com/photo-1580674285054-bed31e145f59?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80"
-                  alt="Shipping operations"
+                  alt="Dispatch operations"
                   className="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-700"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-transparent to-transparent" />
                 <div className="absolute bottom-3 left-3 right-3">
-                  <p className="text-white font-semibold text-xs">50+ Countries</p>
-                  <p className="text-slate-300 text-xs">Direct Operations</p>
+                  <p className="text-white font-semibold text-xs">48-State Coverage</p>
+                  <p className="text-slate-300 text-xs">Carrier dispatch support</p>
                 </div>
               </motion.div>
             </div>
@@ -205,7 +205,7 @@ export default function ExperienceExpertise() {
                   <span className="text-white font-semibold">4.9/5 Rating</span>
                 </div>
                 <div className="text-slate-300 text-sm">
-                  Based on 1,200+ client reviews
+                  Carrier-focused service standards
                 </div>
               </div>
             </motion.div>

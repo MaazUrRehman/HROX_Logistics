@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Target, Lightbulb, Users, Award, Zap, Shield, Heart, Star } from "lucide-react";
+import { Target, Lightbulb, Users, Award } from "lucide-react";
 
 export default function CoreValues() {
   return (
@@ -67,7 +67,7 @@ export default function CoreValues() {
             transition={{ delay: 0.2 }}
             className="text-slate-400 mt-4 max-w-2xl mx-auto"
           >
-            The principles that guide our everyday operations and strategic decisions
+            The principles that guide our dispatch support and carrier relationships
           </motion.p>
         </div>
 
@@ -76,28 +76,28 @@ export default function CoreValues() {
             { 
               icon: Target, 
               title: "Precision", 
-              desc: "Meticulous planning ensuring every detail is executed flawlessly.",
+              desc: "Careful load review, appointment awareness, and paperwork attention on every dispatch.",
               gradient: "from-blue-500 to-cyan-500",
               delay: 0
             },
             { 
               icon: Lightbulb, 
               title: "Innovation", 
-              desc: "Leveraging the latest tech to optimize routes and tracking.",
+              desc: "Using practical tools and market awareness to support better route and load decisions.",
               gradient: "from-indigo-500 to-blue-500",
               delay: 0.1
             },
             { 
               icon: Users, 
               title: "Partnership", 
-              desc: "We act as an extension of your team, not just a service provider.",
+              desc: "We work as an extension of your carrier operation, not just another vendor.",
               gradient: "from-blue-500 to-blue-600",
               delay: 0.2
             },
             { 
               icon: Award, 
               title: "Excellence", 
-              desc: "Committed to delivering the highest standards in the industry.",
+              desc: "Committed to professional communication, clean records, and dependable follow-through.",
               gradient: "from-cyan-500 to-blue-500",
               delay: 0.3
             },

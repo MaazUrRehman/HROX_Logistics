@@ -1,50 +1,49 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Ship, Plane, Truck, PackageCheck, Map, Anchor, ArrowRight, CheckCircle2 } from "lucide-react";
-import Link from "next/link";
+import { Ship, Plane, Truck, PackageCheck, Map, Anchor, CheckCircle2 } from "lucide-react";
 
 const quickServices = [
   {
     icon: Ship,
     title: "Ocean Freight Solutions",
-    subtitle: "Navigate the global waters with confidence.",
-    bullets: ["FCL & LCL Management", "Temperature-Controlled Containers", "Port Drayage & Handling", "Marine Insurance"],
+    subtitle: "Port, container, and drayage dispatch coordination.",
+    bullets: ["Container Load Support", "Port Appointment Tracking", "Drayage Coordination", "Detention Documentation"],
     color: "from-blue-500 to-cyan-500"
   },
   {
     icon: Plane,
     title: "Air Freight Forwarding",
-    subtitle: "Speed, security, and global reach for time-critical cargo.",
-    bullets: ["Next Flight Out (NFO)", "Charter Services", "Consolidation Facilities", "Door-to-Airport Transit"],
+    subtitle: "Airport and expedited load support for time-critical lanes.",
+    bullets: ["Expedited Load Dispatch", "Airport Pickup Updates", "Hotshot Coordination", "Urgent Broker Communication"],
     color: "from-indigo-500 to-blue-500"
   },
   {
     icon: Truck,
-    title: "Road & Rail Transport",
-    subtitle: "Connecting the dots across continents.",
-    bullets: ["FTL & LTL Shipping", "Cross-Border Trucking", "Intermodal Rail Options", "Specialized Heavy Haul"],
+    title: "Rail & Road Transport",
+    subtitle: "Over-the-road and intermodal-adjacent dispatch support.",
+    bullets: ["FTL & LTL Dispatch", "Cross-Border Support", "Intermodal Updates", "Flatbed & Reefer Lanes"],
     color: "from-blue-600 to-blue-500"
   },
   {
     icon: PackageCheck,
     title: "Warehousing & Fulfillment",
-    subtitle: "Smart storage powering modern commerce.",
-    bullets: ["Cross-Docking", "Pick & Pack Services", "Inventory Optimization", "Reverse Logistics"],
+    subtitle: "Warehouse appointment and delivery coordination.",
+    bullets: ["Dock Scheduling", "Receiver Communication", "POD Follow-Up", "Delay Documentation"],
     color: "from-cyan-500 to-blue-500"
   },
   {
     icon: Map,
     title: "Supply Chain Consulting",
-    subtitle: "Data-driven strategies to lower costs and boost speed.",
-    bullets: ["Network Optimization", "Risk Mitigation", "Supplier Audits", "Technology Integration"],
+    subtitle: "Carrier operations guidance to improve dispatch performance.",
+    bullets: ["Lane Planning", "Cost Control", "Workflow Setup", "Revenue Visibility"],
     color: "from-blue-500 to-indigo-500"
   },
   {
     icon: Anchor,
     title: "Customs Brokerage",
-    subtitle: "Clearing hurdles, preventing delays.",
-    bullets: ["Tariff Classification", "Import/Export Filing", "Duty Drawback", "Compliance Training"],
+    subtitle: "Cross-border documentation and broker instruction support.",
+    bullets: ["Document Checklists", "Border Load Updates", "Compliance Awareness", "Broker Coordination"],
     color: "from-sky-500 to-blue-500"
   }
 ];
@@ -96,7 +95,7 @@ export default function HomeServices() {
           >
             End-to-End{" "}
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-blue-500">
-              Logistics Solutions
+              Truck Dispatching Services
             </span>
           </motion.h2>
           <motion.p 
@@ -106,7 +105,7 @@ export default function HomeServices() {
             transition={{ delay: 0.2 }}
             className="text-lg text-slate-600 max-w-3xl mx-auto"
           >
-            Comprehensive supply chain solutions tailored to your business needs
+            Carrier-focused dispatch support tailored to your equipment, lanes, and weekly goals
           </motion.p>
         </div>
 

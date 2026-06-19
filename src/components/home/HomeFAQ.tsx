@@ -6,24 +6,24 @@ import { useState } from "react";
 
 const faqs = [
   {
-    question: "Do you offer real-time tracking for international shipments?",
-    answer: "Yes, our advanced digital tracking system provides 24/7 visibility for all freight types. You can monitor your cargo's progress, temperature conditions (for cold chain), and estimated arrival times through your dedicated client dashboard."
+    question: "What types of carriers do you dispatch?",
+    answer: "We support owner-operators and small fleets across common equipment types including dry van, reefer, flatbed, box truck, hotshot, power-only, and eligible specialized lanes."
   },
   {
-    question: "How do you handle customs clearance for complex regions?",
-    answer: "We have certified customs brokers embedded globally. They pre-clear cargo, handle accurate tariff classification, and navigate localized compliance laws to prevent costly delays at borders or ports."
+    question: "Do you negotiate rates with brokers?",
+    answer: "Yes. We communicate with brokers on load details, rate expectations, appointments, and required paperwork while keeping the carrier involved in final load decisions."
   },
   {
-    question: "What is your policy on cargo insurance?",
-    answer: "We offer comprehensive marine and freight insurance tailored to the value and risk profile of your goods. From localized damage to total loss prevention, your cargo is fully secured."
+    question: "Do you guarantee weekly revenue?",
+    answer: "No dispatch company can responsibly guarantee revenue because freight markets change. We focus on strong load search, clear communication, and smart lane planning."
   },
   {
-    question: "Can you accommodate scalable warehousing during peak seasons?",
-    answer: "Absolutely. Our flexible warehousing agreements allow you to dynamically scale up storage space and fulfillment operations during your peak retail or manufacturing seasons without locking you into rigid long-term contracts."
+    question: "Can you help with paperwork?",
+    answer: "Yes. We help organize rate confirmations, bills of lading, proof of delivery, accessorial notes, and other dispatch-related documents."
   },
   {
     question: "What industries do you specialize in?",
-    answer: "While we operate globally across all sectors, we maintain specialized supply chain architectures for Retail & E-Commerce, Healthcare & Pharma, Automotive, Tech & Electronics, and Food & Beverage."
+    answer: "We support trucking work across retail, manufacturing, healthcare, automotive, food and beverage, warehouse distribution, and port or intermodal-adjacent operations."
   }
 ];
 

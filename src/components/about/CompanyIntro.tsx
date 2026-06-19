@@ -1,10 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { 
-  ArrowRight, 
-  CheckCircle2, 
-  Building2, 
+import {
   Globe, 
   LineChart, 
   Users, 
@@ -14,18 +11,27 @@ import {
   Clock,
   Target,
   Sparkles,
-  TrendingUp
 } from "lucide-react";
-import Link from "next/link";
+
+const particles = [
+  { x: 40, y: 120, duration: 7, delay: 0.2, left: "8%" },
+  { x: 180, y: 420, duration: 9, delay: 1.1, left: "21%" },
+  { x: 320, y: 260, duration: 6, delay: 2.4, left: "35%" },
+  { x: 90, y: 780, duration: 8, delay: 0.8, left: "48%" },
+  { x: 430, y: 560, duration: 10, delay: 3.1, left: "62%" },
+  { x: 250, y: 180, duration: 7, delay: 1.7, left: "74%" },
+  { x: 480, y: 860, duration: 9, delay: 2.8, left: "86%" },
+  { x: 130, y: 640, duration: 6, delay: 4.0, left: "94%" },
+];
 
 export default function CompanyIntro() {
   const coreValues = [
-    { icon: Globe, text: "Global Network Coverage", description: "Strategic partnerships across 50+ countries" },
-    { icon: LineChart, text: "Data-Driven Operations", description: "Real-time analytics & predictive logistics" },
-    { icon: Users, text: "Client-First Approach", description: "Dedicated account management teams" },
-    { icon: Shield, text: "Secure & Compliant", description: "ISO-certified & fully insured shipments" },
-    { icon: Zap, text: "Rapid Response", description: "24/7 emergency handling & support" },
-    { icon: Target, text: "Sustainable Solutions", description: "Eco-friendly transport alternatives" }
+    { icon: Globe, text: "Nationwide Lane Support", description: "Dispatch assistance across core U.S. freight markets" },
+    { icon: LineChart, text: "Data-Driven Operations", description: "Rate, route, and weekly planning visibility" },
+    { icon: Users, text: "Carrier-First Approach", description: "Dedicated support for owner-operators and fleets" },
+    { icon: Shield, text: "Documentation Focus", description: "Organized dispatch records and paperwork follow-up" },
+    { icon: Zap, text: "Rapid Response", description: "Active-load communication and issue escalation" },
+    { icon: Target, text: "Revenue-Minded Planning", description: "Smarter load selection based on carrier goals" }
   ];
 
   const stats = [
@@ -65,13 +71,13 @@ export default function CompanyIntro() {
         />
         
         {/* Floating particles */}
-        {[...Array(8)].map((_, i) => (
+        {particles.map((particle, i) => (
           <motion.div
             key={i}
             className="absolute w-1 h-1 bg-blue-400/40 rounded-full"
             initial={{ 
-              x: Math.random() * 500,
-              y: Math.random() * 1000,
+              x: particle.x,
+              y: particle.y,
               opacity: 0
             }}
             animate={{ 
@@ -79,13 +85,13 @@ export default function CompanyIntro() {
               opacity: [0, 0.5, 0]
             }}
             transition={{ 
-              duration: 5 + Math.random() * 5,
+              duration: particle.duration,
               repeat: Infinity,
-              delay: Math.random() * 5,
+              delay: particle.delay,
               ease: "linear"
             }}
             style={{
-              left: `${Math.random() * 100}%`,
+              left: particle.left,
             }}
           />
         ))}
@@ -110,7 +116,7 @@ export default function CompanyIntro() {
             transition={{ delay: 0.2, duration: 0.6 }}
             className="text-3xl md:text-5xl font-extrabold text-slate-900 mt-6 mb-6 leading-tight"
           >
-            Building the Infrastructure{" "}
+            Building Better{" "}
             <motion.span 
               initial={{ opacity: 0, scale: 0.8 }}
               whileInView={{ opacity: 1, scale: 1 }}
@@ -118,7 +124,7 @@ export default function CompanyIntro() {
               transition={{ delay: 0.4, duration: 0.5 }}
               className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-blue-500 inline-block"
             >
-              of Tomorrow's Trade
+              Dispatch Operations
             </motion.span>
           </motion.h2>
           
@@ -129,9 +135,9 @@ export default function CompanyIntro() {
             transition={{ delay: 0.5, duration: 0.6 }}
             className="text-lg md:text-xl text-slate-600 max-w-4xl mx-auto leading-relaxed"
           >
-            At HROX Logistics, we operate at the intersection of technology and transport. 
-            Our vast infrastructure is designed not just to move cargo, but to optimize 
-            global supply chains from the ground up.
+            At HROX Dispatchers, we operate where trucking discipline meets daily execution.
+            Our team helps carriers manage load opportunities, broker communication,
+            driver updates, and documentation with a professional dispatch process.
           </motion.p>
         </motion.div>
 
@@ -161,9 +167,9 @@ export default function CompanyIntro() {
               </motion.div>
               <h3 className="text-2xl font-bold text-slate-900 mb-4">Our Mission</h3>
               <p className="text-slate-600 leading-relaxed">
-                To revolutionize global logistics by combining cutting-edge technology with 
-                human expertise, delivering seamless, sustainable, and scalable supply chain 
-                solutions that empower businesses to thrive in an interconnected world.
+                To help carriers operate with confidence by combining practical dispatch
+                experience, responsive communication, and organized paperwork support that
+                keeps trucks moving and records clean.
               </p>
             </motion.div>
 
@@ -182,9 +188,9 @@ export default function CompanyIntro() {
               </motion.div>
               <h3 className="text-2xl font-bold text-slate-900 mb-4">Our Vision</h3>
               <p className="text-slate-600 leading-relaxed">
-                To become the world's most trusted logistics partner, recognized for our 
-                unwavering commitment to innovation, reliability, and customer success, 
-                while building a more connected and sustainable future for global trade.
+                To become a trusted dispatch partner for owner-operators and small fleets,
+                recognized for honest communication, dependable coordination, and carrier-first
+                service.
               </p>
             </motion.div>
 
@@ -203,10 +209,9 @@ export default function CompanyIntro() {
               </motion.div>
               <h3 className="text-2xl font-bold text-slate-900 mb-4">Our Commitment</h3>
               <p className="text-slate-600 leading-relaxed">
-                We leverage data analytics, strategic hub placements, and an unwavering 
-                dedication to customer satisfaction to stand out as industry leaders. 
-                Every shipment, every route, every solution is crafted with precision, 
-                transparency, and a relentless pursuit of excellence.
+                We bring structure to dispatch work through careful load review, broker follow-up,
+                appointment awareness, and documentation support. Every carrier relationship is
+                handled with clarity, transparency, and practical trucking know-how.
               </p>
             </motion.div>
           </motion.div>

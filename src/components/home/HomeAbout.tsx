@@ -29,7 +29,7 @@ export default function HomeAbout() {
             <div className="relative z-10 rounded-2xl overflow-hidden shadow-2xl border-4 border-white">
               <img 
                 src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" 
-                alt="Logistics Operations" 
+                alt="Truck dispatch operations" 
                 className="w-full h-auto object-cover hover:scale-105 transition-transform duration-700"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-blue-900/20 to-transparent pointer-events-none" />
@@ -54,9 +54,9 @@ export default function HomeAbout() {
                 transition={{ delay: 0.2, duration: 0.5 }}
                 className="text-3xl md:text-5xl font-extrabold text-slate-900 mt-4 mb-6 leading-tight"
               >
-                Delivering Excellence{" "}
+                Dispatching With{" "}
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-blue-500">
-                  Across Borders.
+                  Carrier Focus.
                 </span>
               </motion.h2>
               <motion.p 
@@ -66,7 +66,7 @@ export default function HomeAbout() {
                 transition={{ delay: 0.3, duration: 0.5 }}
                 className="text-lg text-slate-600 leading-relaxed font-semibold"
               >
-                With decades of inherited operational experience, HROX Logistics transcends traditional freight forwarding. We are architects of global trade, bridging continents with efficiency, speed, and uncompromising reliability.
+                HROX Dispatchers gives carriers dependable back-office dispatch support built around load coordination, rate communication, paperwork follow-up, and practical trucking operations.
               </motion.p>
             </div>
             
@@ -78,9 +78,9 @@ export default function HomeAbout() {
               className="space-y-4 "
             >
               {[
-                { icon: Globe, text: "Global Network & Local Expertise" },
-                { icon: Clock, text: "Advanced Cargo Tracking & Routing" },
-                { icon: Shield, text: "Sustainable Shipping Practices" },
+                { icon: Globe, text: "Nationwide Carrier Lane Support" },
+                { icon: Clock, text: "Active Load Updates & Scheduling" },
+                { icon: Shield, text: "Paperwork & Compliance Awareness" },
                 { icon: Truck, text: "Dedicated Account Management" }
               ].map((item, idx) => (
                 <motion.li 

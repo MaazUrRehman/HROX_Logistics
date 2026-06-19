@@ -3,24 +3,25 @@
 "use client";
 
 import Link from "next/link";
-import { Truck, Mail, Phone, MapPin, ArrowRight } from "lucide-react";
+import { Mail, Phone, MapPin, ArrowRight } from "lucide-react";
 import { motion } from "framer-motion";
+import { services } from "@/data/services";
 
 export default function Footer() {
   const quickLinks = [
     { name: "Home", href: "/" },
     { name: "About", href: "/about" },
-    { name: "Services", href: "/services" },
+    { name: "Contact", href: "/contact" },
     { name: "FAQs", href: "/#faq-section" },
   ];
 
-  const services = [
-    "Road Freight",
-    "Ocean Freight",
-    "Air Transport",
-    "Warehousing",
-    "Supply Chain",
-    "Last Mile Delivery",
+  const policyLinks = [
+    { name: "Privacy Policy", href: "/privacy-policy" },
+    { name: "Refund Policy", href: "/refund-policy" },
+    { name: "Return Policy", href: "/return-policy" },
+    { name: "Cancellation Policy", href: "/cancellation-policy" },
+    { name: "Terms & Conditions", href: "/terms-and-conditions" },
+    { name: "Shipping & Delivery Policy", href: "/shipping-and-delivery-policy" },
   ];
 
   return (
@@ -40,11 +41,14 @@ export default function Footer() {
             <Link href="/" className="flex items-center gap-2 group inline-block">
 
               <span className="font-bold text-3xl text-white tracking-tight">
-                HROX <span className="bg-gradient-to-r from-blue-400 to-blue-500 bg-clip-text text-transparent">Logistics</span>
+                HROX <span className="bg-gradient-to-r from-blue-400 to-blue-500 bg-clip-text text-transparent">Dispatchers</span>
               </span>
             </Link>
             <p className="text-slate-300 leading-relaxed">
-              Delivering excellence across the globe with precision and care. As a trusted leader in logistics and supply chain management, we provide reliable, fast, and secure solutions tailored to meet your unique business needs. </p>
+              Professional truck dispatching support for owner-operators and small fleets.
+              We help carriers coordinate loads, communicate with brokers, organize paperwork,
+              and keep daily operations moving with confidence.
+            </p>
           </motion.div>
 
           {/* Quick Links */}
@@ -88,11 +92,11 @@ export default function Footer() {
               {services.map((item, idx) => (
                 <li key={idx}>
                   <Link
-                    href="/services"
+                    href={`/services/${item.slug}`}
                     className="group flex items-center gap-2 text-slate-300 hover:text-blue-400 transition-all duration-300"
                   >
                     <div className="w-1.5 h-1.5 rounded-full bg-blue-500 opacity-0 group-hover:opacity-100 transition-all duration-300" />
-                    <span>{item}</span>
+                    <span>{item.title}</span>
                   </Link>
                 </li>
               ))}
@@ -134,21 +138,41 @@ export default function Footer() {
               >
                 <Mail className="h-5 w-5 text-blue-500 shrink-0 transition-colors group-hover:text-blue-400" />
                 <span className="text-slate-300 group-hover:text-blue-400 transition-colors">
-                  hroxlogistics@gmail.com
+                  hroxdispatchers@gmail.com
                 </span>
               </motion.li>
             </ul>
           </motion.div>
         </div>
 
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, delay: 0.35 }}
+          className="mt-6 border-t border-slate-800/50 pt-6"
+        >
+          <h3 className="text-white font-bold text-xl mb-4">Policies</h3>
+          <div className="flex flex-wrap gap-x-10 gap-y-4">
+            {policyLinks.map((item) => (
+              <Link
+                key={item.href}
+                href={item.href}
+                className="text-slate-300 hover:text-blue-400 transition-colors"
+              >
+                {item.name}
+              </Link>
+            ))}
+          </div>
+        </motion.div>
+
         {/* Bottom Bar */}
         <motion.div
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           transition={{ duration: 0.5, delay: 0.4 }}
-          className="border-t border-slate-800/50 justify-center mt-16 pt-8 text-center text-slate-300 text-sm flex flex-col md:flex-row justify-between items-center gap-4"
+          className="border-t border-slate-800/50 justify-center mt-8 pt-8 text-center text-slate-300 text-sm flex flex-col md:flex-row justify-between items-center gap-4"
         >
-          <p>&copy; {new Date().getFullYear()} HROX Logistics. All rights reserved.</p>
+          <p>&copy; {new Date().getFullYear()} HROX Dispatchers. All rights reserved.</p>
         </motion.div>
       </div>
     </footer>

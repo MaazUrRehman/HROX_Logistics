@@ -9,14 +9,14 @@ export default function Features() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-5xl font-bold text-white mb-4 tracking-tight">Why Choose HROX?</h2>
-          <p className="text-lg text-blue-100/70 max-w-2xl mx-auto">Industry-leading reliability with a modern, data-driven approach to global shipping and logistics.</p>
+          <p className="text-lg text-blue-100/70 max-w-2xl mx-auto">Reliable dispatch support with a modern, carrier-focused approach to trucking operations.</p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {[
-            { icon: Globe2, title: "Global Reach", desc: "Network spanning over 150 countries ensuring your cargo goes wherever it needs to." },
-            { icon: ShieldCheck, title: "Secure & Insured", desc: "Top-tier cargo protection and comprehensive tracking for total peace of mind." },
-            { icon: Clock, title: "On-Time Delivery", desc: "Optimized routing and precision planning guarantee timely arrivals, every time." },
+            { icon: Globe2, title: "Nationwide Lanes", desc: "Support for carriers running regional, long-haul, port, warehouse, and specialized trucking lanes." },
+            { icon: ShieldCheck, title: "Professional Paperwork", desc: "Organized rate confirmations, POD follow-up, accessorial notes, and dispatch documentation." },
+            { icon: Clock, title: "Responsive Updates", desc: "Clear communication for pickup windows, delivery appointments, check calls, and active-load changes." },
           ].map((feature, idx) => (
             <motion.div 
               initial={{ opacity: 0, y: 20 }}

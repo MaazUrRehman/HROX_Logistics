@@ -7,26 +7,26 @@ const processSteps = [
   {
     num: "01",
     icon: ClipboardList,
-    title: "Booking & Planning",
-    desc: "We analyze your cargo requirements and chart out the most efficient logistical pathway."
+    title: "Carrier Onboarding",
+    desc: "We review your authority, equipment, preferred lanes, documents, and weekly dispatch goals."
   },
   {
     num: "02",
     icon: PackageSearch,
-    title: "Processing & Customs",
-    desc: "Our experts clear the bureaucratic hurdles, ensuring fully compliant cross-border transit."
+    title: "Load Search",
+    desc: "Our dispatch team screens load opportunities, reviews requirements, and communicates with brokers."
   },
   {
     num: "03",
     icon: Truck,
-    title: "Multi-modal Transport",
-    desc: "Deploying a blend of air, ocean, and road freight to move your goods swiftly."
+    title: "Dispatch Coordination",
+    desc: "We support appointment details, check calls, driver updates, and broker communication."
   },
   {
     num: "04",
     icon: Box,
-    title: "Safe Delivery",
-    desc: "Last-mile coordination guarantees your cargo reaches its final destination securely."
+    title: "Paperwork Follow-Up",
+    desc: "We help organize PODs, rate confirmations, accessorial notes, and billing-ready records."
   }
 ];
 

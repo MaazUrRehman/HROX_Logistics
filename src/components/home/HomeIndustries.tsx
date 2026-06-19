@@ -1,45 +1,44 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { ShoppingCart, HeartPulse, Cpu, Car, Factory, Coffee, ArrowRight } from "lucide-react";
-import Link from "next/link";
+import { ShoppingCart, HeartPulse, Cpu, Car, Factory, Coffee } from "lucide-react";
 
 export default function HomeIndustries() {
   const industries = [
     {
       icon: ShoppingCart,
       title: "Retail & E-Commerce",
-      desc: "High-speed fulfillment and dynamic routing tailored for modern retail demands.",
+      desc: "Dispatch support for retail freight, appointment windows, and high-volume delivery schedules.",
       image: "https://images.unsplash.com/photo-1441986300917-64674bd600d8?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
     },
     {
       icon: HeartPulse,
       title: "Healthcare & Pharma",
-      desc: "Temperature-controlled and highly secure transport for life-saving cargo.",
+      desc: "Clear coordination for temperature-sensitive and time-critical healthcare freight.",
       image: "https://images.unsplash.com/photo-1532938911079-1b06ac7ceec7?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
     },
     {
       icon: Cpu,
       title: "Tech & Electronics",
-      desc: "Anti-static, secure, and expedited handling for sensitive high-value components.",
+      desc: "Expedited and high-value load communication for sensitive technology freight.",
       image: "https://images.unsplash.com/photo-1518770660439-4636190af475?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
     },
     {
       icon: Car,
       title: "Automotive",
-      desc: "Just-in-time delivery networks keeping assembly lines moving without delay.",
+      desc: "Practical dispatch support for just-in-time parts and production-sensitive lanes.",
       image: "https://images.unsplash.com/photo-1565043589221-1a6fd9ae45c7?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
     },
     {
       icon: Factory,
       title: "Manufacturing",
-      desc: "Heavy-lift and oversized cargo management for industrial supply chains.",
+      desc: "Load coordination for industrial lanes, flatbed freight, and plant delivery schedules.",
       image: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
     },
     {
       icon: Coffee,
       title: "Food & Beverage",
-      desc: "End-to-end cold chain solutions guaranteeing freshness and climate safety.",
+      desc: "Reefer-friendly dispatch communication for pickup times, delivery windows, and temperature notes.",
       image: "https://images.unsplash.com/photo-1542838132-92c53300491e?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
     }
   ];

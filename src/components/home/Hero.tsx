@@ -10,15 +10,15 @@ export default function Hero() {
   const backgroundImages = [
     {
       url: "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80",
-      alt: "Logistics Warehouse"
+      alt: "Truck dispatch operations"
     },
     {
       url: "https://images.unsplash.com/photo-1494412574643-ff11b0a5c1c3?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80",
-      alt: "Cargo Ship"
+      alt: "Freight coordination"
     },
     {
       url: "https://images.unsplash.com/photo-1578575437130-527eed3abbec?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80",
-      alt: "Distribution Center"
+      alt: "Distribution center dispatch"
     },
     {
       url: "https://images.unsplash.com/photo-1601584115197-04ecc0da31d7?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80",
@@ -26,7 +26,7 @@ export default function Hero() {
     },
     {
       url: "https://images.unsplash.com/photo-1493962853295-0fd70327578a?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80",
-      alt: "Global Supply Chain"
+      alt: "Carrier support"
     }
   ];
 
@@ -92,10 +92,10 @@ export default function Hero() {
             transition={{ delay: 0.3, duration: 0.6 }}
             className="text-3xl md:text-5xl lg:text-7xl font-bold text-white tracking-tight mb-6 leading-tight"
           >
-            Moving Your Business{" "}
+            Dispatch Support That Keeps{" "}
             <br className="hidden md:block"/>
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-300 via-blue-200 to-blue-400">
-              Forward, Worldwide.
+              Trucks Moving.
             </span>
           </motion.h1>
           
@@ -106,9 +106,9 @@ export default function Hero() {
             transition={{ delay: 0.4, duration: 0.6 }}
             className="text-lg md:text-xl text-blue-50 mb-10 max-w-3xl mx-auto leading-relaxed"
           >
-            Seamless, secure, and rapid freight solutions tailored to your business. 
-            From ocean forwarding to last-mile delivery, we handle the complexity 
-            so you can focus on growth.
+            Professional truck dispatching for owner-operators and small fleets.
+            We coordinate loads, broker communication, paperwork, and daily updates
+            so carriers can focus on driving and revenue.
           </motion.p>
           
           {/* CTA Buttons */}
@@ -119,10 +119,10 @@ export default function Hero() {
             className="flex flex-col sm:flex-row gap-5 justify-center items-center"
           >
             <Link 
-              href="/services" 
+              href="/services/rail-road-transport" 
               className="group w-full sm:w-auto bg-gradient-to-r from-blue-600 to-blue-500 hover:from-blue-700 hover:to-blue-600 text-white px-8 py-4 rounded-full font-bold text-lg transition-all duration-300 transform hover:scale-105 active:scale-95 shadow-xl hover:shadow-2xl hover:shadow-blue-500/30 flex items-center justify-center gap-2"
             >
-              Explore Our Services 
+              Explore Our Services
               <motion.div
                 animate={{ x: [0, 5, 0] }}
                 transition={{ duration: 1.5, repeat: Infinity, ease: "easeInOut" }}

@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { TreePine, Scale, CheckSquare, Leaf, Shield, BadgeCheck } from "lucide-react";
+import { TreePine, Scale, BadgeCheck } from "lucide-react";
 
 export default function BusinessValues() {
   return (
@@ -76,19 +76,19 @@ export default function BusinessValues() {
             { 
               icon: TreePine, 
               title: "Sustainability", 
-              desc: "Committed to reducing our carbon footprint through eco-friendly fleet options and highly optimized routing algorithms to minimize empty miles.",
+              desc: "Committed to smarter lane planning and practical routing decisions that help carriers reduce unnecessary empty miles where possible.",
               gradient: "from-blue-500 to-cyan-500"
             },
             { 
               icon: Scale, 
               title: "Fair & Transparent", 
-              desc: "We believe in honest pricing without hidden fees. Our clients have complete transparency over costs and operational methodologies.",
+              desc: "We believe in clear dispatch expectations, honest communication, and transparent service terms with every carrier we support.",
               gradient: "from-blue-500 to-cyan-500"
             },
             { 
               icon: BadgeCheck, 
               title: "Strict Compliance", 
-              desc: "Adhering strictly to international trade regulations, labor laws, and safety standards to ensure liability-free transportation.",
+              desc: "We respect carrier compliance requirements and help keep dispatch records, broker instructions, and paperwork organized.",
               gradient: "from-blue-500 to-cyan-500"
             }
           ].map((val, idx) => (

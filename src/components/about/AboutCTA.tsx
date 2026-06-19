@@ -2,7 +2,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { ArrowRight, Rocket, CheckCircle2, TrendingUp, Ship, Plane, Truck } from "lucide-react";
+import { ArrowRight, CheckCircle2, TrendingUp, Ship, Plane, Truck } from "lucide-react";
 import Link from "next/link";
 
 export default function AboutCTA() {
@@ -64,8 +64,8 @@ export default function AboutCTA() {
           transition={{ delay: 0.2 }}
           className="text-lg md:text-xl text-slate-600 mb-10 max-w-2xl mx-auto leading-relaxed"
         >
-          Join hundreds of satisfied clients who trust us with their logistics needs. 
-          Let's discuss how we can help your business grow.
+          Connect with a dispatch team that understands carriers, brokers, appointments,
+          paperwork, and the urgency of keeping trucks loaded.
         </motion.p>
 
         {/* Features Row */}
@@ -108,7 +108,7 @@ export default function AboutCTA() {
             whileTap={{ scale: 0.95 }}
           >
             <Link 
-              href="/services" 
+              href="/services/rail-road-transport" 
               className="group inline-flex items-center gap-2 bg-gradient-to-r from-blue-600 to-blue-500 hover:from-blue-700 hover:to-blue-600 text-white px-8 py-4 rounded-full font-bold text-lg transition-all duration-300 shadow-lg hover:shadow-xl"
             >
               Explore Our Services
@@ -135,18 +135,18 @@ export default function AboutCTA() {
           <div className="flex flex-wrap justify-center items-center gap-6 text-slate-500">
             <div className="flex items-center gap-2">
               <Ship className="w-4 h-4 text-blue-500" />
-              <span className="text-sm">Ocean Freight</span>
+              <span className="text-sm">Port Dispatch</span>
             </div>
             <div className="flex items-center gap-2">
               <Plane className="w-4 h-4 text-blue-500" />
-              <span className="text-sm">Air Freight</span>
+              <span className="text-sm">Expedited Freight</span>
             </div>
             <div className="flex items-center gap-2">
               <Truck className="w-4 h-4 text-blue-500" />
-              <span className="text-sm">Road Transport</span>
+              <span className="text-sm">Road Dispatch</span>
             </div>
             <div className="text-sm font-semibold text-slate-700 ml-0 sm:ml-4">
-              Trusted by 500+ businesses worldwide
+              Trusted dispatch support for American carriers
             </div>
           </div>
         </motion.div>

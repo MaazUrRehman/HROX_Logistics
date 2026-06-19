@@ -1,7 +1,6 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Truck, Globe, Shield, TrendingUp } from "lucide-react";
 
 export default function AboutHeader() {
   return (
@@ -60,7 +59,7 @@ export default function AboutHeader() {
           >
             About{" "}
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-300 via-blue-200 to-blue-400">
-              HROX Logistics
+              HROX Dispatchers
             </span>
           </motion.h1>
           
@@ -71,7 +70,7 @@ export default function AboutHeader() {
             transition={{ delay: 0.4, duration: 0.6 }}
             className="text-lg md:text-xl text-blue-100 max-w-3xl mx-auto leading-relaxed mb-10"
           >
-            We are redefining global supply chains through innovation, reliability, and an unwavering commitment to our clients' success.
+            We help trucking carriers run cleaner dispatch operations through responsive communication, organized paperwork, and practical load coordination.
           </motion.p>
 
          
