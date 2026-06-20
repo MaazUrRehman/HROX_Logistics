@@ -84,7 +84,7 @@ export default function Navbar() {
             {/* Logo */}
             <Link href="/" className="flex items-center gap-0 group">
               <motion.div className="relative">
-                <div className="relative w-50 h-30">
+                <div className="relative w-30 h-30">
                   <Image
                     src="/hrox.png"
                     alt="HROX Dispatchers Logo"
@@ -101,7 +101,7 @@ export default function Navbar() {
                   transition={{ duration: 0.3 }}
                 />
               </motion.div>
-              <span className={`${poppins.className} font-bold text-2xl tracking-tight text-white -ml-15`}>
+              <span className={`${poppins.className} font-bold text-2xl tracking-tight text-white `}>
                 HROX{" "}
                 <span className="bg-gradient-to-r from-[#049468] to-[#06b57a] bg-clip-text text-transparent">
                   Dispatchers
