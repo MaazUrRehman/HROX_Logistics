@@ -16,7 +16,7 @@ export const metadata: Metadata = {
   title: "HROX Dispatchers | Truck Dispatching Services",
   description: "HROX Dispatchers provides professional truck dispatching services for owner-operators and small fleets across the United States.",
   icons: {
-    icon: "/hrox_logo_ship.png", // ✅ your actual file name
+    icon: "/hrox.png", // ✅ your actual file name
   },
 };
 

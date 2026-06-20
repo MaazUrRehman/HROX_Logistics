@@ -1,4 +1,3 @@
-
 "use client";
 
 import Link from "next/link";
@@ -42,26 +41,27 @@ export default function Navbar() {
 
   return (
     <div className="fixed top-0 w-full z-50">
-      {/* Top Bar - Email and Phone - Same bg as navbar */}
+      {/* Top Bar - Email and Phone */}
       <div
-        className={`w-full transition-all duration-500 ${scrolled
-          ? "bg-white/95 backdrop-blur-md"
-          : "bg-white/80 backdrop-blur-sm"
-          } border-b border-blue-100/50`}
+        className={`w-full transition-all duration-500 ${
+          scrolled
+            ? "bg-black/95 backdrop-blur-md"
+            : "bg-black/80 backdrop-blur-sm"
+        } border-b border-[#049468]/30`}
       >
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-end items-center py-2">
             <div className="flex items-center gap-6">
               <a
                 href="mailto:hroxdispatchers@gmail.com"
-                className="flex items-center gap-2 hover:text-blue-700 transition-colors text-blue-700 font-semibold text-sm"
+                className="flex items-center gap-2 hover:text-[#049468] transition-colors text-white font-semibold text-sm"
               >
                 <Mail className="h-3.5 w-3.5" />
                 <span>hroxdispatchers@gmail.com</span>
               </a>
               <a
                 href="tel:+1234567890"
-                className="flex items-center gap-2 hover:text-blue-700 transition-colors text-blue-700 font-semibold text-sm"
+                className="flex items-center gap-2 hover:text-[#049468] transition-colors text-white font-semibold text-sm"
               >
                 <Phone className="h-3.5 w-3.5" />
                 <span>+1 (555) 123-4567</span>
@@ -73,21 +73,20 @@ export default function Navbar() {
 
       {/* Main Navbar */}
       <nav
-        className={`w-full transition-all duration-500 ${scrolled
-          ? "bg-white/95 backdrop-blur-md shadow-lg"
-          : "bg-white/80 backdrop-blur-sm"
-          } border-b border-blue-100/50`}
+        className={`w-full transition-all duration-500 ${
+          scrolled
+            ? "bg-black/95 backdrop-blur-md shadow-lg shadow-[#049468]/10"
+            : "bg-black/80 backdrop-blur-sm"
+        } border-b border-[#049468]/30`}
       >
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-20">
-            {/* Logo - Blue Truck Icon Only */}
-            <Link href="/" className="flex items-center gap-3 group">
-              <motion.div
-                className="relative"
-              >
-                <div className="relative w-30 h-30">
+            {/* Logo */}
+            <Link href="/" className="flex items-center gap-0 group">
+              <motion.div className="relative">
+                <div className="relative w-50 h-30">
                   <Image
-                    src="/hrox_logo_ship.png"
+                    src="/hrox.png"
                     alt="HROX Dispatchers Logo"
                     fill
                     sizes="120px"
@@ -95,16 +94,16 @@ export default function Navbar() {
                     priority
                   />
                 </div>
-                {/* Subtle pulse effect on hover */}
+                {/* Subtle green glow on hover */}
                 <motion.div
-                  className="absolute inset-0 bg-blue-400 rounded-xl opacity-0 group-hover:opacity-20"
+                  className="absolute inset-0 bg-[#049468] rounded-xl opacity-0 group-hover:opacity-20"
                   whileHover={{ scale: 1.2 }}
                   transition={{ duration: 0.3 }}
                 />
               </motion.div>
-              <span className={`${poppins.className} font-bold text-2xl tracking-tight`}>
+              <span className={`${poppins.className} font-bold text-2xl tracking-tight text-white -ml-15`}>
                 HROX{" "}
-                <span className="bg-gradient-to-r from-blue-600 to-blue-500 bg-clip-text text-transparent">
+                <span className="bg-gradient-to-r from-[#049468] to-[#06b57a] bg-clip-text text-transparent">
                   Dispatchers
                 </span>
               </span>
@@ -112,8 +111,6 @@ export default function Navbar() {
 
             {/* Desktop Nav */}
             <div className="hidden md:flex items-center space-x-1">
-              
-
               {navLinks.slice(0, 2).map((link) => {
                 const isActive = pathname === link.href;
                 return (
@@ -121,16 +118,17 @@ export default function Navbar() {
                     <motion.button
                       whileHover={{ scale: 1.05 }}
                       whileTap={{ scale: 0.95 }}
-                      className={`relative px-4 py-2 mx-1 rounded-lg font-semibold text-base ${poppins.className} transition-all duration-300 ${isActive
-                        ? "text-blue-600"
-                        : "text-slate-700 hover:text-blue-600"
-                        }`}
+                      className={`relative px-4 py-2 mx-1 rounded-lg font-semibold text-base ${poppins.className} transition-all duration-300 ${
+                        isActive
+                          ? "text-[#049468]"
+                          : "text-white hover:text-[#049468]"
+                      }`}
                     >
                       {link.label}
                       {isActive && (
                         <motion.div
                           layoutId="activeNav"
-                          className="absolute bottom-0 left-2 right-2 h-0.5 bg-gradient-to-r from-blue-600 to-blue-400 rounded-full"
+                          className="absolute bottom-0 left-2 right-2 h-0.5 bg-gradient-to-r from-[#049468] to-[#06b57a] rounded-full"
                           initial={{ opacity: 0 }}
                           animate={{ opacity: 1 }}
                           transition={{ duration: 0.3 }}
@@ -140,7 +138,6 @@ export default function Navbar() {
                   </Link>
                 );
               })}
-
 
               <div
                 className="relative"
@@ -153,8 +150,8 @@ export default function Navbar() {
                   onClick={() => setServicesOpen((open) => !open)}
                   className={`relative px-4 py-2 mx-1 rounded-lg font-semibold text-base ${poppins.className} transition-all duration-300 flex items-center gap-1 ${
                     pathname.startsWith("/services")
-                      ? "text-blue-600"
-                      : "text-slate-700 hover:text-blue-600"
+                      ? "text-[#049468]"
+                      : "text-white hover:text-[#049468]"
                   }`}
                   aria-expanded={servicesOpen}
                 >
@@ -163,7 +160,7 @@ export default function Navbar() {
                   {pathname.startsWith("/services") && (
                     <motion.div
                       layoutId="activeNav"
-                      className="absolute bottom-0 left-2 right-2 h-0.5 bg-gradient-to-r from-blue-600 to-blue-400 rounded-full"
+                      className="absolute bottom-0 left-2 right-2 h-0.5 bg-gradient-to-r from-[#049468] to-[#06b57a] rounded-full"
                       initial={{ opacity: 0 }}
                       animate={{ opacity: 1 }}
                       transition={{ duration: 0.3 }}
@@ -178,7 +175,7 @@ export default function Navbar() {
                       animate={{ opacity: 1, y: 0 }}
                       exit={{ opacity: 0, y: 8 }}
                       transition={{ duration: 0.2 }}
-                      className="absolute left-0 top-full mt-3 w-80 rounded-2xl border border-blue-100 bg-white/95 p-3 shadow-2xl backdrop-blur-md"
+                      className="absolute left-0 top-full mt-3 w-80 rounded-2xl border border-[#049468]/30 bg-black/95 p-3 shadow-2xl shadow-[#049468]/10 backdrop-blur-md"
                     >
                       {serviceLinks.map((service) => (
                         <Link
@@ -186,8 +183,8 @@ export default function Navbar() {
                           href={service.href}
                           className={`block rounded-xl px-4 py-3 text-sm font-semibold transition-colors ${
                             pathname === service.href
-                              ? "bg-blue-50 text-blue-600"
-                              : "text-slate-700 hover:bg-blue-50 hover:text-blue-600"
+                              ? "bg-[#049468]/20 text-[#049468]"
+                              : "text-white hover:bg-[#049468]/20 hover:text-[#049468]"
                           }`}
                         >
                           {service.label}
@@ -205,16 +202,17 @@ export default function Navbar() {
                     <motion.button
                       whileHover={{ scale: 1.05 }}
                       whileTap={{ scale: 0.95 }}
-                      className={`relative px-4 py-2 mx-1 rounded-lg font-semibold text-base ${poppins.className} transition-all duration-300 ${isActive
-                        ? "text-blue-600"
-                        : "text-slate-700 hover:text-blue-600"
-                        }`}
+                      className={`relative px-4 py-2 mx-1 rounded-lg font-semibold text-base ${poppins.className} transition-all duration-300 ${
+                        isActive
+                          ? "text-[#049468]"
+                          : "text-white hover:text-[#049468]"
+                      }`}
                     >
                       {link.label}
                       {isActive && (
                         <motion.div
                           layoutId="activeNav"
-                          className="absolute bottom-0 left-2 right-2 h-0.5 bg-gradient-to-r from-blue-600 to-blue-400 rounded-full"
+                          className="absolute bottom-0 left-2 right-2 h-0.5 bg-gradient-to-r from-[#049468] to-[#06b57a] rounded-full"
                           initial={{ opacity: 0 }}
                           animate={{ opacity: 1 }}
                           transition={{ duration: 0.3 }}
@@ -231,7 +229,7 @@ export default function Navbar() {
               <motion.button
                 whileTap={{ scale: 0.95 }}
                 onClick={() => setIsOpen(!isOpen)}
-                className="text-slate-600 hover:text-blue-600 transition-colors focus:outline-none p-2 rounded-lg hover:bg-blue-50"
+                className="text-white hover:text-[#049468] transition-colors focus:outline-none p-2 rounded-lg hover:bg-[#049468]/10"
               >
                 {isOpen ? (
                   <X className="h-6 w-6" />
@@ -251,7 +249,7 @@ export default function Navbar() {
               animate={{ opacity: 1, height: "auto" }}
               exit={{ opacity: 0, height: 0 }}
               transition={{ duration: 0.3, ease: "easeInOut" }}
-              className="md:hidden bg-white/95 backdrop-blur-md border-b border-blue-100"
+              className="md:hidden bg-black/95 backdrop-blur-md border-b border-[#049468]/30"
             >
               <div className="px-4 pt-2 pb-6 space-y-2">
                 {navLinks.slice(0, 2).map((link, index) => {
@@ -266,10 +264,11 @@ export default function Navbar() {
                       <Link
                         href={link.href}
                         onClick={() => setIsOpen(false)}
-                        className={`block px-4 py-3 rounded-lg text-base font-medium transition-all duration-300 ${isActive
-                          ? "text-blue-600 bg-blue-50"
-                          : "text-slate-700 hover:text-blue-600 hover:bg-blue-50"
-                          }`}
+                        className={`block px-4 py-3 rounded-lg text-base font-medium transition-all duration-300 ${
+                          isActive
+                            ? "text-[#049468] bg-[#049468]/10"
+                            : "text-white hover:text-[#049468] hover:bg-[#049468]/10"
+                        }`}
                       >
                         {link.label}
                       </Link>
@@ -284,8 +283,8 @@ export default function Navbar() {
                     onClick={() => setServicesOpen((open) => !open)}
                     className={`w-full flex items-center justify-between px-4 py-3 rounded-lg text-base font-medium transition-all duration-300 ${
                       pathname.startsWith("/services")
-                        ? "text-blue-600 bg-blue-50"
-                        : "text-slate-700 hover:text-blue-600 hover:bg-blue-50"
+                        ? "text-[#049468] bg-[#049468]/10"
+                        : "text-white hover:text-[#049468] hover:bg-[#049468]/10"
                     }`}
                     aria-expanded={servicesOpen}
                   >
@@ -308,8 +307,8 @@ export default function Navbar() {
                             onClick={() => setIsOpen(false)}
                             className={`block rounded-lg px-6 py-2.5 text-sm font-medium ${
                               pathname === service.href
-                                ? "bg-blue-50 text-blue-600"
-                                : "text-slate-600 hover:bg-blue-50 hover:text-blue-600"
+                                ? "bg-[#049468]/10 text-[#049468]"
+                                : "text-white hover:bg-[#049468]/10 hover:text-[#049468]"
                             }`}
                           >
                             {service.label}
@@ -331,10 +330,11 @@ export default function Navbar() {
                       <Link
                         href={link.href}
                         onClick={() => setIsOpen(false)}
-                        className={`block px-4 py-3 rounded-lg text-base font-medium transition-all duration-300 ${isActive
-                          ? "text-blue-600 bg-blue-50"
-                          : "text-slate-700 hover:text-blue-600 hover:bg-blue-50"
-                          }`}
+                        className={`block px-4 py-3 rounded-lg text-base font-medium transition-all duration-300 ${
+                          isActive
+                            ? "text-[#049468] bg-[#049468]/10"
+                            : "text-white hover:text-[#049468] hover:bg-[#049468]/10"
+                        }`}
                       >
                         {link.label}
                       </Link>

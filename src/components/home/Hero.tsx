@@ -6,7 +6,6 @@ import Link from "next/link";
 import { useState, useEffect } from "react";
 
 export default function Hero() {
-  // Add your 5 background image URLs here
   const backgroundImages = [
     {
       url: "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80",
@@ -41,7 +40,7 @@ export default function Hero() {
   }, []);
 
   return (
-    <section className="relative h-[80vh] min-h-[600px] flex items-center justify-center overflow-hidden bg-slate-900">
+    <section className="relative h-[90vh] min-h-[600px] flex items-center justify-center overflow-hidden bg-black">
       
       {/* Background Image Carousel */}
       <AnimatePresence>
@@ -60,8 +59,8 @@ export default function Hero() {
         />
       </AnimatePresence>
       
-      {/* Dark Overlay to make text readable while keeping image vibrant */}
-      <div className="absolute inset-0 bg-gradient-to-r from-slate-900/80 via-slate-900/50 to-slate-900/80 z-5" />
+      {/* Dark Overlay */}
+      <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/50 to-black/80 z-5" />
       
       {/* Image Indicators */}
       <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-30 flex gap-3">
@@ -71,8 +70,8 @@ export default function Hero() {
             onClick={() => setCurrentImageIndex(index)}
             className={`transition-all duration-300 rounded-full ${
               currentImageIndex === index
-                ? "w-8 h-2 bg-blue-500"
-                : "w-2 h-2 bg-blue-300/50 hover:bg-blue-400/70"
+                ? "w-8 h-2 bg-[#049468]"
+                : "w-2 h-2 bg-[#049468]/30 hover:bg-[#049468]/50"
             }`}
             aria-label={`Go to slide ${index + 1}`}
           />
@@ -85,7 +84,6 @@ export default function Hero() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
         >
-          {/* Main Heading */}
           <motion.h1 
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -94,24 +92,22 @@ export default function Hero() {
           >
             Dispatch Support That Keeps{" "}
             <br className="hidden md:block"/>
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-300 via-blue-200 to-blue-400">
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#049468] via-[#06b57a] to-[#049468]">
               Trucks Moving.
             </span>
           </motion.h1>
           
-          {/* Description */}
           <motion.p 
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.4, duration: 0.6 }}
-            className="text-lg md:text-xl text-blue-50 mb-10 max-w-3xl mx-auto leading-relaxed"
+            className="text-lg md:text-xl text-gray-300 mb-10 max-w-3xl mx-auto leading-relaxed"
           >
             Professional truck dispatching for owner-operators and small fleets.
             We coordinate loads, broker communication, paperwork, and daily updates
             so carriers can focus on driving and revenue.
           </motion.p>
           
-          {/* CTA Buttons */}
           <motion.div 
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -120,7 +116,7 @@ export default function Hero() {
           >
             <Link 
               href="/services/rail-road-transport" 
-              className="group w-full sm:w-auto bg-gradient-to-r from-blue-600 to-blue-500 hover:from-blue-700 hover:to-blue-600 text-white px-8 py-4 rounded-full font-bold text-lg transition-all duration-300 transform hover:scale-105 active:scale-95 shadow-xl hover:shadow-2xl hover:shadow-blue-500/30 flex items-center justify-center gap-2"
+              className="group w-full sm:w-auto bg-gradient-to-r from-[#049468] to-[#06b57a] hover:from-[#038a5a] hover:to-[#049468] text-white px-8 py-4 rounded-full font-bold text-lg transition-all duration-300 transform hover:scale-105 active:scale-95 shadow-xl hover:shadow-2xl hover:shadow-[#049468]/30 flex items-center justify-center gap-2"
             >
               Explore Our Services
               <motion.div
@@ -133,9 +129,9 @@ export default function Hero() {
             
             <Link 
               href="/about" 
-              className="group w-full sm:w-auto bg-white hover:bg-slate-50 text-slate-700 px-8 py-4 rounded-full font-bold text-lg transition-all duration-300 shadow-lg hover:shadow-xl border-2 border-blue-200 hover:border-blue-300 flex items-center justify-center gap-2"
+              className="group w-full sm:w-auto bg-white hover:bg-gray-100 text-gray-800 px-8 py-4 rounded-full font-bold text-lg transition-all duration-300 shadow-lg hover:shadow-xl border-2 border-[#049468]/30 hover:border-[#049468] flex items-center justify-center gap-2"
             >
-              <Play className="w-5 h-5 group-hover:scale-110 transition-transform" />
+              <Play className="w-5 h-5 group-hover:scale-110 transition-transform text-[#049468]" />
               Learn More About Us
             </Link>
           </motion.div>

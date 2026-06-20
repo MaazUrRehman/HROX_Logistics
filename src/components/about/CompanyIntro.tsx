@@ -40,11 +40,11 @@ export default function CompanyIntro() {
   ];
 
   return (
-    <section className="py-24 bg-gradient-to-br from-white via-blue-50/30 to-white relative overflow-hidden">
-      {/* Decorative Background Elements with Animation */}
+    <section className="py-24 bg-black relative overflow-hidden">
+      {/* Decorative Background Elements with green glow */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <motion.div 
-          className="absolute top-0 right-0 w-96 h-96 bg-blue-100/30 rounded-full blur-3xl"
+          className="absolute top-0 right-0 w-96 h-96 bg-[#049468]/5 rounded-full blur-3xl"
           animate={{ 
             scale: [1, 1.2, 1],
             x: [0, -30, 0],
@@ -53,7 +53,7 @@ export default function CompanyIntro() {
           transition={{ duration: 12, repeat: Infinity, ease: "easeInOut" }}
         />
         <motion.div 
-          className="absolute bottom-0 left-0 w-96 h-96 bg-blue-100/20 rounded-full blur-3xl"
+          className="absolute bottom-0 left-0 w-96 h-96 bg-[#049468]/5 rounded-full blur-3xl"
           animate={{ 
             scale: [1.2, 1, 1.2],
             x: [0, 30, 0],
@@ -62,7 +62,7 @@ export default function CompanyIntro() {
           transition={{ duration: 14, repeat: Infinity, ease: "easeInOut" }}
         />
         <motion.div 
-          className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-blue-50/20 rounded-full blur-3xl"
+          className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-[#049468]/5 rounded-full blur-3xl"
           animate={{ 
             scale: [1, 1.3, 1],
             opacity: [0.3, 0.5, 0.3]
@@ -74,7 +74,7 @@ export default function CompanyIntro() {
         {particles.map((particle, i) => (
           <motion.div
             key={i}
-            className="absolute w-1 h-1 bg-blue-400/40 rounded-full"
+            className="absolute w-1 h-1 bg-[#049468]/40 rounded-full"
             initial={{ 
               x: particle.x,
               y: particle.y,
@@ -99,7 +99,7 @@ export default function CompanyIntro() {
       
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
-        {/* Header Section with Enhanced Animation */}
+        {/* Header Section */}
         <motion.div 
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -107,14 +107,12 @@ export default function CompanyIntro() {
           transition={{ duration: 0.8 }}
           className="text-center mb-16"
         >
-          
-          
           <motion.h2 
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.2, duration: 0.6 }}
-            className="text-3xl md:text-5xl font-extrabold text-slate-900 mt-6 mb-6 leading-tight"
+            className="text-3xl md:text-5xl font-extrabold text-white mt-6 mb-6 leading-tight"
           >
             Building Better{" "}
             <motion.span 
@@ -122,7 +120,7 @@ export default function CompanyIntro() {
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}
               transition={{ delay: 0.4, duration: 0.5 }}
-              className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-blue-500 inline-block"
+              className="text-transparent bg-clip-text bg-gradient-to-r from-[#049468] to-[#06b57a] inline-block"
             >
               Dispatch Operations
             </motion.span>
@@ -133,7 +131,7 @@ export default function CompanyIntro() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.5, duration: 0.6 }}
-            className="text-lg md:text-xl text-slate-600 max-w-4xl mx-auto leading-relaxed"
+            className="text-lg md:text-xl text-gray-400 max-w-4xl mx-auto leading-relaxed"
           >
             At HROX Dispatchers, we operate where trucking discipline meets daily execution.
             Our team helps carriers manage load opportunities, broker communication,
@@ -144,7 +142,7 @@ export default function CompanyIntro() {
         {/* Main Content Grid */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
           
-          {/* Left Side - Detailed Description with Hover Effects */}
+          {/* Left Side - Detailed Description */}
           <motion.div 
             initial={{ opacity: 0, x: -50 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -155,18 +153,18 @@ export default function CompanyIntro() {
             <motion.div 
               whileHover={{ y: -8, scale: 1.02 }}
               transition={{ duration: 0.3 }}
-              className="bg-white rounded-2xl p-8 shadow-lg border border-blue-100 hover:shadow-2xl hover:border-blue-200 transition-all duration-300 group"
+              className="bg-black/40 backdrop-blur-sm rounded-2xl p-8 shadow-lg border border-gray-800 hover:shadow-2xl hover:border-[#049468]/30 transition-all duration-300 group"
             >
               <motion.div
                 initial={{ rotate: 0 }}
                 whileHover={{ rotate: 360 }}
                 transition={{ duration: 0.6 }}
-                className="w-12 h-12 bg-gradient-to-br from-blue-500 to-blue-600 rounded-xl flex items-center justify-center mb-4 shadow-lg group-hover:shadow-xl"
+                className="w-12 h-12 bg-gradient-to-br from-[#049468] to-[#06b57a] rounded-xl flex items-center justify-center mb-4 shadow-lg group-hover:shadow-xl"
               >
                 <Truck className="w-6 h-6 text-white" />
               </motion.div>
-              <h3 className="text-2xl font-bold text-slate-900 mb-4">Our Mission</h3>
-              <p className="text-slate-600 leading-relaxed">
+              <h3 className="text-2xl font-bold text-white mb-4">Our Mission</h3>
+              <p className="text-gray-400 leading-relaxed">
                 To help carriers operate with confidence by combining practical dispatch
                 experience, responsive communication, and organized paperwork support that
                 keeps trucks moving and records clean.
@@ -176,18 +174,18 @@ export default function CompanyIntro() {
             <motion.div 
               whileHover={{ y: -8, scale: 1.02 }}
               transition={{ duration: 0.3 }}
-              className="bg-gradient-to-br from-blue-50 to-white rounded-2xl p-8 border border-blue-100 hover:shadow-2xl hover:border-blue-200 transition-all duration-300 group"
+              className="bg-black/40 backdrop-blur-sm rounded-2xl p-8 border border-gray-800 hover:shadow-2xl hover:border-[#049468]/30 transition-all duration-300 group"
             >
               <motion.div
                 initial={{ rotate: 0 }}
                 whileHover={{ rotate: 360 }}
                 transition={{ duration: 0.6 }}
-                className="w-12 h-12 bg-gradient-to-br from-blue-500 to-blue-600 rounded-xl flex items-center justify-center mb-4 shadow-lg"
+                className="w-12 h-12 bg-gradient-to-br from-[#049468] to-[#06b57a] rounded-xl flex items-center justify-center mb-4 shadow-lg"
               >
                 <LineChart className="w-6 h-6 text-white" />
               </motion.div>
-              <h3 className="text-2xl font-bold text-slate-900 mb-4">Our Vision</h3>
-              <p className="text-slate-600 leading-relaxed">
+              <h3 className="text-2xl font-bold text-white mb-4">Our Vision</h3>
+              <p className="text-gray-400 leading-relaxed">
                 To become a trusted dispatch partner for owner-operators and small fleets,
                 recognized for honest communication, dependable coordination, and carrier-first
                 service.
@@ -197,18 +195,18 @@ export default function CompanyIntro() {
             <motion.div 
               whileHover={{ y: -8, scale: 1.02 }}
               transition={{ duration: 0.3 }}
-              className="bg-white rounded-2xl p-8 shadow-lg border border-blue-100 hover:shadow-2xl hover:border-blue-200 transition-all duration-300 group"
+              className="bg-black/40 backdrop-blur-sm rounded-2xl p-8 shadow-lg border border-gray-800 hover:shadow-2xl hover:border-[#049468]/30 transition-all duration-300 group"
             >
               <motion.div
                 initial={{ rotate: 0 }}
                 whileHover={{ rotate: 360 }}
                 transition={{ duration: 0.6 }}
-                className="w-12 h-12 bg-gradient-to-br from-blue-500 to-blue-600 rounded-xl flex items-center justify-center mb-4 shadow-lg"
+                className="w-12 h-12 bg-gradient-to-br from-[#049468] to-[#06b57a] rounded-xl flex items-center justify-center mb-4 shadow-lg"
               >
                 <Shield className="w-6 h-6 text-white" />
               </motion.div>
-              <h3 className="text-2xl font-bold text-slate-900 mb-4">Our Commitment</h3>
-              <p className="text-slate-600 leading-relaxed">
+              <h3 className="text-2xl font-bold text-white mb-4">Our Commitment</h3>
+              <p className="text-gray-400 leading-relaxed">
                 We bring structure to dispatch work through careful load review, broker follow-up,
                 appointment awareness, and documentation support. Every carrier relationship is
                 handled with clarity, transparency, and practical trucking know-how.
@@ -237,14 +235,14 @@ export default function CompanyIntro() {
                   key={idx}
                   whileHover={{ scale: 1.05, y: -5 }}
                   transition={{ duration: 0.3 }}
-                  className="bg-white rounded-xl p-4 text-center shadow-lg border border-blue-100"
+                  className="bg-black/40 backdrop-blur-sm rounded-xl p-4 text-center shadow-lg border border-gray-800"
                 >
                   <motion.div
                     initial={{ scale: 0 }}
                     whileInView={{ scale: 1 }}
                     viewport={{ once: true }}
                     transition={{ delay: stat.delay, type: "spring" }}
-                    className="w-10 h-10 bg-gradient-to-br from-blue-500 to-blue-600 rounded-lg flex items-center justify-center mx-auto mb-3"
+                    className="w-10 h-10 bg-gradient-to-br from-[#049468] to-[#06b57a] rounded-lg flex items-center justify-center mx-auto mb-3"
                   >
                     <stat.icon className="w-5 h-5 text-white" />
                   </motion.div>
@@ -253,11 +251,11 @@ export default function CompanyIntro() {
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                     transition={{ delay: stat.delay + 0.1 }}
-                    className="text-2xl font-bold text-blue-600"
+                    className="text-2xl font-bold text-[#049468]"
                   >
                     {stat.value}
                   </motion.div>
-                  <div className="text-sm text-slate-600">{stat.label}</div>
+                  <div className="text-sm text-gray-400">{stat.label}</div>
                 </motion.div>
               ))}
             </motion.div>
@@ -269,7 +267,7 @@ export default function CompanyIntro() {
               viewport={{ once: true }}
               transition={{ delay: 0.4 }}
               whileHover={{ scale: 1.01 }}
-              className="bg-gradient-to-br from-blue-600 to-blue-500 rounded-2xl p-8 text-white shadow-2xl"
+              className="bg-gradient-to-br from-[#049468] to-[#06b57a] rounded-2xl p-8 text-white shadow-2xl"
             >
               <motion.div
                 initial={{ rotate: -10, scale: 0 }}
@@ -281,7 +279,7 @@ export default function CompanyIntro() {
                 <Sparkles className="w-6 h-6" />
                 <h3 className="text-2xl font-bold">Our Core Values</h3>
               </motion.div>
-              <p className="text-blue-100 mb-6">
+              <p className="text-[#e8f5f0] mb-6">
                 The principles that guide everything we do, every day.
               </p>
               
@@ -301,21 +299,19 @@ export default function CompanyIntro() {
                         whileHover={{ rotate: 360 }}
                         transition={{ duration: 0.6 }}
                       >
-                        <value.icon className="w-5 h-5 text-blue-200 shrink-0 mt-0.5 group-hover:text-white transition-colors" />
+                        <value.icon className="w-5 h-5 text-[#b8e6d8] shrink-0 mt-0.5 group-hover:text-white transition-colors" />
                       </motion.div>
                       <div>
-                        <h4 className="font-bold text-white mb-1 group-hover:text-blue-100 transition-colors">
+                        <h4 className="font-bold text-white mb-1 group-hover:text-[#e8f5f0] transition-colors">
                           {value.text}
                         </h4>
-                        <p className="text-sm text-blue-100">{value.description}</p>
+                        <p className="text-sm text-[#e8f5f0]">{value.description}</p>
                       </div>
                     </div>
                   </motion.div>
                 ))}
               </div>
             </motion.div>
-
-            
           </motion.div>
 
         </div>

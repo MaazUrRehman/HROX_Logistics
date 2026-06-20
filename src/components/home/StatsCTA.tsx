@@ -2,16 +2,16 @@
 
 export default function StatsCTA() {
   return (
-    <section className="py-20 bg-gradient-to-br from-slate-900 via-blue-900/40 to-slate-900 relative overflow-hidden">
-      <div className="absolute top-0 right-0 -mt-20 -mr-20 w-96 h-96 bg-blue-600 rounded-full blur-[120px] opacity-20 pointer-events-none" />
-      <div className="absolute bottom-0 left-0 -mb-20 -ml-20 w-80 h-80 bg-blue-400 rounded-full blur-[100px] opacity-10 pointer-events-none" />
+    <section className="py-20 bg-black relative overflow-hidden">
+      <div className="absolute top-0 right-0 -mt-20 -mr-20 w-96 h-96 bg-[#049468] rounded-full blur-[120px] opacity-10 pointer-events-none" />
+      <div className="absolute bottom-0 left-0 -mb-20 -ml-20 w-80 h-80 bg-[#049468] rounded-full blur-[100px] opacity-5 pointer-events-none" />
       
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 flex flex-col lg:flex-row items-center justify-between gap-12">
         <div className="lg:w-1/2">
           <h2 className="text-3xl md:text-4xl font-extrabold text-white mb-6 leading-tight">
             Ready to improve your dispatch operation?
           </h2>
-          <p className="text-blue-100/80 text-lg mb-8 leading-relaxed">
+          <p className="text-gray-400 text-lg mb-8 leading-relaxed">
             Work with HROX Dispatchers for professional load coordination, broker communication, and paperwork support built around carrier success.
           </p>
         </div>
@@ -22,11 +22,11 @@ export default function StatsCTA() {
             { number: "6", label: "Dispatch Services" },
             { number: "24/7", label: "Active Load Support" }
           ].map((stat, idx) => (
-            <div key={idx} className="bg-slate-800/40 backdrop-blur-md p-6 rounded-2xl border border-slate-700/50 hover:border-blue-500/30 transition-colors text-center group">
-              <div className="text-3xl md:text-4xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-blue-200 mb-2 group-hover:scale-105 transition-transform duration-300">
+            <div key={idx} className="bg-black/40 backdrop-blur-md p-6 rounded-2xl border border-gray-800 hover:border-[#049468]/30 transition-colors text-center group">
+              <div className="text-3xl md:text-4xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-[#049468] to-[#06b57a] mb-2 group-hover:scale-105 transition-transform duration-300">
                 {stat.number}
               </div>
-              <div className="text-slate-300 font-medium group-hover:text-white transition-colors">{stat.label}</div>
+              <div className="text-gray-400 font-medium group-hover:text-white transition-colors">{stat.label}</div>
             </div>
           ))}
         </div>

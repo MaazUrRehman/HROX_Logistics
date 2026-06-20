@@ -5,12 +5,12 @@ import { TreePine, Scale, BadgeCheck } from "lucide-react";
 
 export default function BusinessValues() {
   return (
-    <section className="py-24 bg-slate-900 relative overflow-hidden">
+    <section className="py-24 bg-black relative overflow-hidden">
       
-      {/* Animated Background Elements */}
+      {/* Animated Background Elements with green glow */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <motion.div 
-          className="absolute top-20 left-10 w-72 h-72 bg-blue-500/10 rounded-full blur-3xl"
+          className="absolute top-20 left-10 w-72 h-72 bg-[#049468]/5 rounded-full blur-3xl"
           animate={{ 
             scale: [1, 1.2, 1],
             x: [0, 50, 0],
@@ -19,7 +19,7 @@ export default function BusinessValues() {
           transition={{ duration: 15, repeat: Infinity, ease: "easeInOut" }}
         />
         <motion.div 
-          className="absolute bottom-20 right-10 w-96 h-96 bg-indigo-500/10 rounded-full blur-3xl"
+          className="absolute bottom-20 right-10 w-96 h-96 bg-[#049468]/5 rounded-full blur-3xl"
           animate={{ 
             scale: [1.2, 1, 1.2],
             x: [0, -50, 0],
@@ -28,7 +28,7 @@ export default function BusinessValues() {
           transition={{ duration: 18, repeat: Infinity, ease: "easeInOut" }}
         />
         <motion.div 
-          className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-cyan-500/5 rounded-full blur-3xl"
+          className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-[#049468]/5 rounded-full blur-3xl"
           animate={{ 
             scale: [1, 1.5, 1],
             opacity: [0.3, 0.5, 0.3]
@@ -44,7 +44,7 @@ export default function BusinessValues() {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-300 font-bold tracking-wider uppercase text-sm"
+            className="text-transparent bg-clip-text bg-gradient-to-r from-[#049468] to-[#06b57a] font-bold tracking-wider uppercase text-sm"
           >
             Our Business Ethics
           </motion.span>
@@ -56,7 +56,7 @@ export default function BusinessValues() {
             className="text-3xl md:text-5xl font-extrabold text-white mt-3"
           >
             How We Conduct{" "}
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-300">
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#049468] to-[#06b57a]">
               Business
             </span>
           </motion.h2>
@@ -65,7 +65,7 @@ export default function BusinessValues() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.2 }}
-            className="text-slate-400 mt-4 max-w-2xl mx-auto"
+            className="text-gray-400 mt-4 max-w-2xl mx-auto"
           >
             Guiding principles that define our commitment to excellence and integrity
           </motion.p>
@@ -77,19 +77,19 @@ export default function BusinessValues() {
               icon: TreePine, 
               title: "Sustainability", 
               desc: "Committed to smarter lane planning and practical routing decisions that help carriers reduce unnecessary empty miles where possible.",
-              gradient: "from-blue-500 to-cyan-500"
+              gradient: "from-[#049468] to-[#06b57a]"
             },
             { 
               icon: Scale, 
               title: "Fair & Transparent", 
               desc: "We believe in clear dispatch expectations, honest communication, and transparent service terms with every carrier we support.",
-              gradient: "from-blue-500 to-cyan-500"
+              gradient: "from-[#049468] to-[#06b57a]"
             },
             { 
               icon: BadgeCheck, 
               title: "Strict Compliance", 
               desc: "We respect carrier compliance requirements and help keep dispatch records, broker instructions, and paperwork organized.",
-              gradient: "from-blue-500 to-cyan-500"
+              gradient: "from-[#049468] to-[#06b57a]"
             }
           ].map((val, idx) => (
             <motion.div
@@ -98,7 +98,7 @@ export default function BusinessValues() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: idx * 0.2 }}
-              className="group relative bg-slate-800/50 backdrop-blur-sm rounded-2xl p-8 border border-slate-700 hover:border-blue-500/50 transition-all duration-500 hover:shadow-2xl hover:shadow-blue-500/10"
+              className="group relative bg-black/40 backdrop-blur-sm rounded-2xl p-8 border border-gray-800 hover:border-[#049468]/50 transition-all duration-500 hover:shadow-2xl hover:shadow-[#049468]/10"
             >
               {/* Glow Effect on Hover */}
               <div className={`absolute inset-0 bg-gradient-to-br ${val.gradient} opacity-0 group-hover:opacity-5 rounded-2xl transition-opacity duration-500`} />
@@ -107,7 +107,7 @@ export default function BusinessValues() {
                 <val.icon className="w-10 h-10 text-white" />
               </div>
               <h3 className="text-2xl font-bold text-white mb-4 text-center">{val.title}</h3>
-              <p className="text-slate-400 leading-relaxed text-center group-hover:text-slate-300 transition-colors duration-300">
+              <p className="text-gray-400 leading-relaxed text-center group-hover:text-gray-300 transition-colors duration-300">
                 {val.desc}
               </p>
               

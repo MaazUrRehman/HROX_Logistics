@@ -44,32 +44,30 @@ export default function HomeIndustries() {
   ];
 
   return (
-    <section className="py-24 bg-slate-50 relative overflow-hidden">
+    <section className="py-24 bg-black relative overflow-hidden">
       {/* Dynamic Background Elements */}
       <div className="absolute top-0 right-0 w-full h-full overflow-hidden pointer-events-none z-0">
-        <div className="absolute top-0 left-1/4 w-px h-full bg-gradient-to-b from-transparent via-blue-200/50 to-transparent" />
-        <div className="absolute top-0 left-2/4 w-px h-full bg-gradient-to-b from-transparent via-blue-200/50 to-transparent" />
-        <div className="absolute top-0 left-3/4 w-px h-full bg-gradient-to-b from-transparent via-blue-200/50 to-transparent" />
+        <div className="absolute top-0 left-1/4 w-px h-full bg-gradient-to-b from-transparent via-[#049468]/10 to-transparent" />
+        <div className="absolute top-0 left-2/4 w-px h-full bg-gradient-to-b from-transparent via-[#049468]/10 to-transparent" />
+        <div className="absolute top-0 left-3/4 w-px h-full bg-gradient-to-b from-transparent via-[#049468]/10 to-transparent" />
       </div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="flex flex-col md:flex-row justify-between items-end mb-16 gap-6">
           <div className="max-w-2xl">
-            
             <motion.h2 
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: 0.1 }}
-              className="text-4xl md:text-5xl font-extrabold text-slate-900 tracking-tight mt-6 mb-4"
+              className="text-4xl md:text-5xl font-extrabold text-white tracking-tight mt-6 mb-4"
             >
               Specialized For{" "}
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-blue-400">
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#049468] to-[#06b57a]">
                 Your Sector
               </span>
             </motion.h2>
           </div>
-          
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -80,9 +78,8 @@ export default function HomeIndustries() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: idx * 0.1, duration: 0.6 }}
-              className="group relative h-80 rounded-3xl overflow-hidden cursor-pointer shadow-lg hover:shadow-2xl hover:shadow-blue-900/20 transition-all duration-500"
+              className="group relative h-80 rounded-3xl overflow-hidden cursor-pointer shadow-lg hover:shadow-2xl hover:shadow-[#049468]/10 transition-all duration-500"
             >
-              {/* Background Image that zooms on hover */}
               <div className="absolute inset-0 w-full h-full">
                 <img 
                   src={industry.image} 
@@ -91,27 +88,23 @@ export default function HomeIndustries() {
                 />
               </div>
 
-              {/* Gradient Overlays. Solid blue-900 by default, fades to see image on hover */}
-              <div className="absolute inset-0 bg-slate-900/85 group-hover:bg-slate-900/40 transition-colors duration-500" />
-              <div className="absolute inset-0 bg-gradient-to-t from-slate-900 via-slate-900/60 to-transparent group-hover:from-slate-900/90 group-hover:via-slate-900/30 transition-colors duration-500" />
+              <div className="absolute inset-0 bg-black/85 group-hover:bg-black/40 transition-colors duration-500" />
+              <div className="absolute inset-0 bg-gradient-to-t from-black via-black/60 to-transparent group-hover:from-black/90 group-hover:via-black/30 transition-colors duration-500" />
 
-              {/* Content */}
               <div className="absolute inset-0 p-8 flex flex-col justify-end">
-                {/* Icon animates down from top left on hover, or stays and gets bright */}
-                <div className="w-14 h-14 bg-white/10 backdrop-blur-md border border-white/20 rounded-2xl flex items-center justify-center mb-auto group-hover:bg-blue-600 group-hover:border-blue-500 transition-all duration-500 transform group-hover:-translate-y-1">
-                  <industry.icon className="w-7 h-7 text-blue-100 group-hover:text-white transition-colors" />
+                <div className="w-14 h-14 bg-white/10 backdrop-blur-md border border-white/20 rounded-2xl flex items-center justify-center mb-auto group-hover:bg-[#049468] group-hover:border-[#049468] transition-all duration-500 transform group-hover:-translate-y-1">
+                  <industry.icon className="w-7 h-7 text-gray-300 group-hover:text-white transition-colors" />
                 </div>
                 
                 <div className="transform transition-transform duration-500 translate-y-8 group-hover:translate-y-0">
-                  <h3 className="text-2xl font-bold text-white mb-2 group-hover:text-blue-300 transition-colors">{industry.title}</h3>
-                  <p className="text-slate-300 text-sm leading-relaxed opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-100 line-clamp-2">
+                  <h3 className="text-2xl font-bold text-white mb-2 group-hover:text-[#049468] transition-colors">{industry.title}</h3>
+                  <p className="text-gray-400 text-sm leading-relaxed opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-100 line-clamp-2">
                     {industry.desc}
                   </p>
                 </div>
 
-                {/* Animated progress bar at bottom */}
                 <div className="absolute bottom-0 left-0 w-full h-1 bg-transparent">
-                  <div className="w-0 h-full bg-gradient-to-r from-blue-500 to-blue-300 group-hover:w-full transition-all duration-700 ease-out" />
+                  <div className="w-0 h-full bg-gradient-to-r from-[#049468] to-[#06b57a] group-hover:w-full transition-all duration-700 ease-out" />
                 </div>
               </div>
             </motion.div>

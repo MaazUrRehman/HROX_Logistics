@@ -6,10 +6,10 @@ import Link from "next/link";
 
 export default function HomeAbout() {
   return (
-    <section className="py-24 bg-gradient-to-r from-white via-blue-100/80 to-white relative overflow-hidden">
-      {/* Decorative Background Elements */}
-      <div className="absolute top-0 right-0 w-96 h-96 bg-blue-100/20 rounded-full blur-3xl" />
-      <div className="absolute bottom-0 left-0 w-96 h-96 bg-blue-100/20 rounded-full blur-3xl" />
+    <section className="py-24 bg-black relative overflow-hidden">
+      {/* Decorative Background Elements with green glow */}
+      <div className="absolute top-0 right-0 w-96 h-96 bg-[#049468]/5 rounded-full blur-3xl" />
+      <div className="absolute bottom-0 left-0 w-96 h-96 bg-[#049468]/5 rounded-full blur-3xl" />
       
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
@@ -22,19 +22,18 @@ export default function HomeAbout() {
             transition={{ duration: 0.6 }}
             className="relative"
           >
-            <div className="absolute -top-6 -left-6 w-32 h-32 bg-blue-100 rounded-2xl z-0 animate-pulse" />
-            <div className="absolute -bottom-6 -right-6 w-48 h-48 bg-blue-50 rounded-full z-0" />
-            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-blue-200/20 rounded-full blur-2xl" />
+            <div className="absolute -top-6 -left-6 w-32 h-32 bg-[#049468]/10 rounded-2xl z-0 animate-pulse" />
+            <div className="absolute -bottom-6 -right-6 w-48 h-48 bg-[#049468]/5 rounded-full z-0" />
+            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-[#049468]/5 rounded-full blur-2xl" />
             
-            <div className="relative z-10 rounded-2xl overflow-hidden shadow-2xl border-4 border-white">
+            <div className="relative z-10 rounded-2xl overflow-hidden shadow-2xl border-4 border-[#049468]/20">
               <img 
                 src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" 
                 alt="Truck dispatch operations" 
                 className="w-full h-auto object-cover hover:scale-105 transition-transform duration-700"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-blue-900/20 to-transparent pointer-events-none" />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent pointer-events-none" />
             </div>
-            
           </motion.div>
 
           {/* Content Side */}
@@ -46,16 +45,15 @@ export default function HomeAbout() {
             className="space-y-8"
           >
             <div>
-              
               <motion.h2 
                 initial={{ opacity: 0, y: 10 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: 0.2, duration: 0.5 }}
-                className="text-3xl md:text-5xl font-extrabold text-slate-900 mt-4 mb-6 leading-tight"
+                className="text-3xl md:text-5xl font-extrabold text-white mt-4 mb-6 leading-tight"
               >
                 Dispatching With{" "}
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-blue-500">
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#049468] to-[#06b57a]">
                   Carrier Focus.
                 </span>
               </motion.h2>
@@ -64,7 +62,7 @@ export default function HomeAbout() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: 0.3, duration: 0.5 }}
-                className="text-lg text-slate-600 leading-relaxed font-semibold"
+                className="text-lg text-gray-300 leading-relaxed font-semibold"
               >
                 HROX Dispatchers gives carriers dependable back-office dispatch support built around load coordination, rate communication, paperwork follow-up, and practical trucking operations.
               </motion.p>
@@ -75,7 +73,7 @@ export default function HomeAbout() {
               whileInView={{ opacity: 1 }}
               viewport={{ once: true }}
               transition={{ delay: 0.4, duration: 0.5 }}
-              className="space-y-4 "
+              className="space-y-4"
             >
               {[
                 { icon: Globe, text: "Nationwide Carrier Lane Support" },
@@ -89,12 +87,12 @@ export default function HomeAbout() {
                   whileInView={{ opacity: 1, x: 0 }}
                   viewport={{ once: true }}
                   transition={{ delay: 0.5 + (idx * 0.1), duration: 0.4 }}
-                  className="flex items-center gap-3 text-slate-700 font-semibold group"
+                  className="flex items-center gap-3 text-gray-300 font-semibold group"
                 >
-                  <div className="bg-blue-50 rounded-lg p-1 group-hover:bg-blue-100 transition-colors">
-                    <CheckCircle2 className="w-5 h-5 text-blue-600 shrink-0" />
+                  <div className="bg-[#049468]/10 rounded-lg p-1 group-hover:bg-[#049468]/20 transition-colors">
+                    <CheckCircle2 className="w-5 h-5 text-[#049468] shrink-0" />
                   </div>
-                  <span className="group-hover:text-blue-600 transition-colors">{item.text}</span>
+                  <span className="group-hover:text-[#049468] transition-colors">{item.text}</span>
                 </motion.li>
               ))}
             </motion.ul>
@@ -108,7 +106,7 @@ export default function HomeAbout() {
             >
               <Link 
                 href="/about" 
-                className="group inline-flex items-center gap-2 bg-gradient-to-r from-blue-600 to-blue-500 hover:from-blue-700 hover:to-blue-600 text-white px-8 py-3.5 rounded-xl font-bold transition-all duration-300 shadow-lg hover:shadow-xl hover:shadow-blue-500/30"
+                className="group inline-flex items-center gap-2 bg-gradient-to-r from-[#049468] to-[#06b57a] hover:from-[#038a5a] hover:to-[#049468] text-white px-8 py-3.5 rounded-xl font-bold transition-all duration-300 shadow-lg hover:shadow-xl hover:shadow-[#049468]/30"
               >
                 Discover Our Story 
                 <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
