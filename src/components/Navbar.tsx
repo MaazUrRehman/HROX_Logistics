@@ -84,7 +84,7 @@ export default function Navbar() {
             {/* Logo */}
             <Link href="/" className="flex items-center gap-0 group">
               <motion.div className="relative">
-                <div className="relative w-30 h-30">
+                <div className="relative w-20 h-20">
                   <Image
                     src="/hrox.png"
                     alt="HROX Dispatchers Logo"
