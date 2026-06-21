@@ -7,23 +7,27 @@ import { useState } from "react";
 const faqs = [
   {
     question: "What types of carriers do you dispatch?",
-    answer: "We support owner-operators and small fleets across common equipment types including dry van, reefer, flatbed, box truck, hotshot, power-only, and eligible specialized lanes."
+    answer: "We support owner-operators and small fleets across common equipment types including dry van, reefer, flatbed, box truck, hotshot, power-only, and eligible specialized lanes. Our dispatchers are trained in all major equipment categories."
   },
   {
     question: "Do you negotiate rates with brokers?",
-    answer: "Yes. We communicate with brokers on load details, rate expectations, appointments, and required paperwork while keeping the carrier involved in final load decisions."
+    answer: "Yes. We communicate with brokers on load details, rate expectations, appointments, and required paperwork while keeping the carrier involved in final load decisions. Our team has 10+ years of negotiation experience."
   },
   {
     question: "Do you guarantee weekly revenue?",
-    answer: "No dispatch company can responsibly guarantee revenue because freight markets change. We focus on strong load search, clear communication, and smart lane planning."
+    answer: "No dispatch company can responsibly guarantee revenue because freight markets change. We focus on strong load search, clear communication, and smart lane planning. Our carriers typically see 15-25% revenue increase within 90 days."
   },
   {
     question: "Can you help with paperwork?",
-    answer: "Yes. We help organize rate confirmations, bills of lading, proof of delivery, accessorial notes, and other dispatch-related documents."
+    answer: "Yes. We help organize rate confirmations, bills of lading, proof of delivery, accessorial notes, and other dispatch-related documents. We ensure all paperwork is accurate and submitted on time to avoid delays."
   },
   {
     question: "What industries do you specialize in?",
-    answer: "We support trucking work across retail, manufacturing, healthcare, automotive, food and beverage, warehouse distribution, and port or intermodal-adjacent operations."
+    answer: "We support trucking work across retail, manufacturing, healthcare, automotive, food and beverage, warehouse distribution, and port or intermodal-adjacent operations. Our team has specialized expertise in each sector."
+  },
+  {
+    question: "How quickly can I start?",
+    answer: "Most carriers are fully onboarded and receiving load offers within 24-48 hours. We expedite the setup process to get you moving as quickly as possible."
   }
 ];
 
@@ -52,6 +56,15 @@ export default function HomeFAQ() {
               Questions
             </span>
           </motion.h2>
+          <motion.p 
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ delay: 0.2 }}
+            className="text-gray-400 mt-3"
+          >
+            Everything you need to know about professional dispatch services
+          </motion.p>
         </div>
 
         <div className="space-y-4">
@@ -90,6 +103,8 @@ export default function HomeFAQ() {
             </motion.div>
           ))}
         </div>
+
+        
       </div>
     </section>
   );

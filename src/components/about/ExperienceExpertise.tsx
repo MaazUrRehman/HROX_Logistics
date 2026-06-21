@@ -92,9 +92,9 @@ export default function ExperienceExpertise() {
               className="space-y-4 pt-4"
             >
               {[
-                { icon: Shield, text: "Carrier Documentation Support", color: "from-[#049468] to-[#06b57a]" },
-                { icon: ThumbsUp, text: "Responsive Dispatch Communication", color: "from-[#049468] to-[#06b57a]" },
-                { icon: CheckCircle2, text: "Broker and Appointment Coordination", color: "from-[#049468] to-[#06b57a]" }
+                { icon: Shield, text: "Carrier Documentation Support for truck loads", color: "from-[#049468] to-[#06b57a]" },
+                { icon: ThumbsUp, text: "Responsive check-call and dispatch communication", color: "from-[#049468] to-[#06b57a]" },
+                { icon: CheckCircle2, text: "Broker, load, and appointment coordination", color: "from-[#049468] to-[#06b57a]" }
               ].map((item, idx) => (
                 <div key={idx} className="flex items-center gap-3 group">
                   <div className={`w-10 h-10 bg-gradient-to-br ${item.color} rounded-lg flex items-center justify-center shrink-0 group-hover:scale-110 transition-transform duration-300`}>

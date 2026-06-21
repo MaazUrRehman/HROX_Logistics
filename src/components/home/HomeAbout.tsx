@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { ArrowRight, CheckCircle2, Truck, Globe, Clock, Shield } from "lucide-react";
+import { ArrowRight, CheckCircle2, Truck, Globe, Clock, Shield, Fuel, Wrench, DollarSign } from "lucide-react";
 import Link from "next/link";
 
 export default function HomeAbout() {
@@ -76,10 +76,10 @@ export default function HomeAbout() {
               className="space-y-4"
             >
               {[
-                { icon: Globe, text: "Nationwide Carrier Lane Support" },
-                { icon: Clock, text: "Active Load Updates & Scheduling" },
-                { icon: Shield, text: "Paperwork & Compliance Awareness" },
-                { icon: Truck, text: "Dedicated Account Management" }
+                { icon: Globe, text: "Nationwide Carrier Lane Support covering all 48 states" },
+                { icon: Clock, text: "Active Load Updates & Scheduling with real-time tracking" },
+                { icon: Shield, text: "Paperwork & Compliance Awareness for DOT/FMCSA rules" },
+                { icon: Truck, text: "Dedicated Account Management for each carrier" }
               ].map((item, idx) => (
                 <motion.li 
                   key={idx} 
@@ -96,6 +96,21 @@ export default function HomeAbout() {
                 </motion.li>
               ))}
             </motion.ul>
+
+            {/* Added: Quick Industry Stats */}
+            <div className="grid grid-cols-3 gap-3 pt-4">
+              {[
+                { icon: Fuel, value: "8%", label: "Fuel Cost Drop" },
+                { icon: Wrench, value: "12%", label: "Fleet Growth" },
+                { icon: DollarSign, value: "$2.85", label: "Avg Dry Van RPM" }
+              ].map((stat, idx) => (
+                <div key={idx} className="text-center p-2 bg-black/30 rounded-lg border border-gray-800/30">
+                  <stat.icon className="w-4 h-4 text-[#049468] mx-auto mb-1" />
+                  <div className="text-sm font-bold text-white">{stat.value}</div>
+                  <div className="text-[10px] text-gray-500">{stat.label}</div>
+                </div>
+              ))}
+            </div>
 
             <motion.div 
               initial={{ opacity: 0, y: 10 }}

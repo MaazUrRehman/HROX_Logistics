@@ -104,7 +104,7 @@ export default function Navbar() {
               <span className={`${poppins.className} font-bold text-2xl tracking-tight text-white `}>
                 HROX{" "}
                 <span className="bg-gradient-to-r from-[#049468] to-[#06b57a] bg-clip-text text-transparent">
-                  Dispatchers
+                  Logistics
                 </span>
               </span>
             </Link>

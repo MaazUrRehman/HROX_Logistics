@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Globe2, ShieldCheck, Clock } from "lucide-react";
+import { Globe2, ShieldCheck, Clock, TrendingUp, Fuel, Award, Users, FileCheck, Truck } from "lucide-react";
 
 export default function Features() {
   return (
@@ -14,9 +14,21 @@ export default function Features() {
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {[
-            { icon: Globe2, title: "Nationwide Lanes", desc: "Support for carriers running regional, long-haul, port, warehouse, and specialized trucking lanes." },
-            { icon: ShieldCheck, title: "Professional Paperwork", desc: "Organized rate confirmations, POD follow-up, accessorial notes, and dispatch documentation." },
-            { icon: Clock, title: "Responsive Updates", desc: "Clear communication for pickup windows, delivery appointments, check calls, and active-load changes." },
+            { 
+              icon: Globe2, 
+              title: "Nationwide Lanes", 
+              desc: "Support for carriers running regional, long-haul, port, warehouse, and specialized trucking lanes. We cover all 48 continental states with local market knowledge." 
+            },
+            { 
+              icon: ShieldCheck, 
+              title: "Professional Paperwork", 
+              desc: "Organized rate confirmations, POD follow-up, accessorial notes, and dispatch documentation. We handle all paperwork so you stay compliant with DOT regulations." 
+            },
+            { 
+              icon: Clock, 
+              title: "Responsive Updates", 
+              desc: "Clear communication for pickup windows, delivery appointments, check calls, and active-load changes. Real-time tracking ensures you're never left wondering." 
+            },
           ].map((feature, idx) => (
             <motion.div 
               initial={{ opacity: 0, y: 20 }}
@@ -31,6 +43,29 @@ export default function Features() {
               </div>
               <h3 className="text-xl font-bold text-white mb-3">{feature.title}</h3>
               <p className="text-gray-400 leading-relaxed">{feature.desc}</p>
+            </motion.div>
+          ))}
+        </div>
+
+        {/* Added: Industry Statistics Section */}
+        <div className="mt-16 grid grid-cols-2 md:grid-cols-4 gap-6">
+          {[
+            { icon: Truck, value: "3.7M+", label: "Truck Drivers Nationwide" },
+            { icon: Fuel, value: "$940B", label: "Annual Industry Revenue" },
+            { icon: Award, value: "99.9%", label: "On-Time Delivery Rate" },
+            { icon: Users, value: "195K", label: "Active Fleet Companies" }
+          ].map((stat, idx) => (
+            <motion.div
+              key={idx}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.3 + idx * 0.1 }}
+              className="text-center p-4 bg-black/30 rounded-xl border border-gray-800/30"
+            >
+              <stat.icon className="w-6 h-6 text-[#049468] mx-auto mb-2" />
+              <div className="text-xl font-bold text-white">{stat.value}</div>
+              <div className="text-xs text-gray-500">{stat.label}</div>
             </motion.div>
           ))}
         </div>

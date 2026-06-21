@@ -1,5 +1,7 @@
 import Hero from "@/components/home/Hero";
 import HomeAbout from "@/components/home/HomeAbout";
+import DispatcherKnowledge from "@/components/home/DispatcherKnowledge";
+import TruckOperations from "@/components/home/TruckOperations";
 import HomeServices from "@/components/home/HomeServices";
 import Features from "@/components/home/Features";
 import HomeProcess from "@/components/home/HomeProcess";
@@ -12,6 +14,8 @@ export default function Home() {
     <div className="flex flex-col min-h-screen">
       <Hero />
       <HomeAbout />
+      <DispatcherKnowledge />
+      <TruckOperations />
       <Features />
       <HomeServices />
       <HomeProcess />

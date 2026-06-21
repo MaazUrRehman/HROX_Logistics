@@ -118,10 +118,6 @@ export default function CoreValues() {
                 <div className={`w-20 h-20 bg-gradient-to-br ${value.gradient} rounded-2xl flex items-center justify-center relative z-10 group-hover:scale-110 transition-all duration-500 shadow-lg group-hover:shadow-xl`}>
                   <value.icon className="w-10 h-10 text-white" />
                 </div>
-                {/* Decorative Number Badge */}
-                <div className="absolute -top-3 -right-3 w-8 h-8 bg-gray-800 text-[#049468] rounded-full flex items-center justify-center font-bold text-sm shadow-md border-2 border-black group-hover:bg-gradient-to-r group-hover:from-[#049468] group-hover:to-[#06b57a] group-hover:text-white transition-all duration-500">
-                  {String(idx + 1).padStart(2, '0')}
-                </div>
               </div>
               
               <h3 className="text-xl font-bold text-white mb-3 group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-[#049468] group-hover:to-[#06b57a] transition-all duration-300">

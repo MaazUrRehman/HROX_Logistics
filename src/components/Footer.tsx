@@ -369,7 +369,7 @@ export default function Footer() {
           transition={{ duration: 0.5, delay: 0.4 }}
           className="border-t border-gray-800/50 justify-center mt-8 pt-8 text-center text-gray-300 text-sm flex flex-col md:flex-row justify-between items-center gap-4"
         >
-          <p>&copy; {new Date().getFullYear()} HROX Dispatchers. All rights reserved.</p>
+          <p>&copy; {new Date().getFullYear()} HROX Logistics LLC. All rights reserved.</p>
         </motion.div>
       </div>
     </footer>

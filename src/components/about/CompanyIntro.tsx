@@ -122,7 +122,7 @@ export default function CompanyIntro() {
               transition={{ delay: 0.4, duration: 0.5 }}
               className="text-transparent bg-clip-text bg-gradient-to-r from-[#049468] to-[#06b57a] inline-block"
             >
-              Dispatch Operations
+              Truck Dispatch Operations
             </motion.span>
           </motion.h2>
           
@@ -134,8 +134,8 @@ export default function CompanyIntro() {
             className="text-lg md:text-xl text-gray-400 max-w-4xl mx-auto leading-relaxed"
           >
             At HROX Dispatchers, we operate where trucking discipline meets daily execution.
-            Our team helps carriers manage load opportunities, broker communication,
-            driver updates, and documentation with a professional dispatch process.
+            Our team helps carriers match driver availability, route planning, broker communication,
+            and delivery checkpoints with a professional dispatch process.
           </motion.p>
         </motion.div>
 
