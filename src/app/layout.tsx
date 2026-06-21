@@ -15,6 +15,11 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "HROX Dispatchers | Truck Dispatching Services",
   description: "HROX Dispatchers provides professional truck dispatching services for owner-operators and small fleets across the United States.",
+  
+  verification: {
+    google: "0NzmArcU5edQ3kLto-sh1qrzcvk_dHNwalFtbiWCFR8",
+  },
+  
   icons: {
     icon: "/hrox.png", // ✅ your actual file name
   },
