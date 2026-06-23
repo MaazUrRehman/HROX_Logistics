@@ -64,7 +64,7 @@ export default function Navbar() {
                 className="flex items-center gap-2 hover:text-[#049468] transition-colors text-white font-semibold text-sm"
               >
                 <Phone className="h-3.5 w-3.5" />
-                <span>+1 (555) 123-4567</span>
+                <span>516 500 0175</span>
               </a>
             </div>
           </div>

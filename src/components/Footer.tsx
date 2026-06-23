@@ -316,7 +316,7 @@ export default function Footer() {
               >
                 <Phone className="h-5 w-5 text-[#049468] shrink-0 transition-colors group-hover:text-[#06b57a]" />
                 <span className="text-gray-300 group-hover:text-[#049468] transition-colors">
-                  +1 (555) 123-4567
+                  516 500 0175
                 </span>
               </motion.li>
               <motion.li
