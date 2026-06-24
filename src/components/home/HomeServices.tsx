@@ -6,16 +6,16 @@ import { Ship, Plane, Truck, PackageCheck, Map, Anchor, CheckCircle2, Fuel, Cloc
 const quickServices = [
   {
     icon: Ship,
-    title: "Ocean Freight Solutions",
-    subtitle: "Port, container, and drayage dispatch coordination.",
+    title: "Ocean Freight Dispatch",
+    subtitle: "Port, container, and drayage coordination.",
     bullets: ["Container Load Support", "Port Appointment Tracking", "Drayage Coordination", "Detention Documentation"],
     color: "from-[#049468] to-[#06b57a]",
     extra: "Ports: LA/LB, NY/NJ, Savannah, Houston"
   },
   {
     icon: Plane,
-    title: "Air Freight Forwarding",
-    subtitle: "Airport and expedited load support for time-critical lanes.",
+    title: "Air Freight Dispatch",
+    subtitle: "Expedited load support for time-critical lanes.",
     bullets: ["Expedited Load Dispatch", "Airport Pickup Updates", "Hotshot Coordination", "Urgent Broker Communication"],
     color: "from-[#049468] to-[#06b57a]",
     extra: "Same-day & next-day available"
@@ -23,14 +23,14 @@ const quickServices = [
   {
     icon: Truck,
     title: "Rail & Road Transport",
-    subtitle: "Over-the-road and intermodal-adjacent dispatch support.",
+    subtitle: "Over-the-road and intermodal dispatch support.",
     bullets: ["FTL & LTL Dispatch", "Cross-Border Support", "Intermodal Updates", "Flatbed & Reefer Lanes"],
     color: "from-[#049468] to-[#06b57a]",
     extra: "48-state coverage + Canada"
   },
   {
     icon: PackageCheck,
-    title: "Warehousing & Fulfillment",
+    title: "Warehouse & Fulfillment",
     subtitle: "Warehouse appointment and delivery coordination.",
     bullets: ["Dock Scheduling", "Receiver Communication", "POD Follow-Up", "Delay Documentation"],
     color: "from-[#049468] to-[#06b57a]",
@@ -46,8 +46,8 @@ const quickServices = [
   },
   {
     icon: Anchor,
-    title: "Customs Brokerage",
-    subtitle: "Cross-border documentation and broker instruction support.",
+    title: "Customs & Cross-Border",
+    subtitle: "Cross-border documentation and broker support.",
     bullets: ["Document Checklists", "Border Load Updates", "Compliance Awareness", "Broker Coordination"],
     color: "from-[#049468] to-[#06b57a]",
     extra: "USMCA/NAFTA compliant"
@@ -96,7 +96,7 @@ export default function HomeServices() {
             transition={{ delay: 0.1 }}
             className="text-3xl md:text-5xl font-extrabold text-white mt-6 mb-4"
           >
-            End-to-End{" "}
+            Comprehensive{" "}
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#049468] to-[#06b57a]">
               Truck Dispatching Services
             </span>
@@ -166,7 +166,7 @@ export default function HomeServices() {
                   ))}
                 </div>
 
-                {/* Added: Extra info tags */}
+                {/* Extra info tags */}
                 <div className="flex flex-wrap gap-2 pt-3 border-t border-gray-800/50">
                   {service.extra && (
                     <span className="text-xs text-[#049468] bg-[#049468]/10 px-3 py-1 rounded-full font-medium">
@@ -181,7 +181,7 @@ export default function HomeServices() {
           ))}
         </div>
 
-        {/* Added: Industry Knowledge Section */}
+        {/* Industry Knowledge Section */}
         <motion.div 
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}

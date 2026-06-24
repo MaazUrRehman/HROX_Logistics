@@ -1,7 +1,6 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Target, Lightbulb, Users, Award } from "lucide-react";
 
 export default function CoreValues() {
   return (
@@ -74,28 +73,28 @@ export default function CoreValues() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {[
             { 
-              icon: Target, 
+              image: "https://images.unsplash.com/photo-1504384308090-c894fdcc538d?w=800&h=600&fit=crop",
               title: "Precision", 
               desc: "Careful load review, appointment awareness, and paperwork attention on every dispatch.",
               gradient: "from-[#049468] to-[#06b57a]",
               delay: 0
             },
             { 
-              icon: Lightbulb, 
+              image: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=800&h=600&fit=crop",
               title: "Innovation", 
               desc: "Using practical tools and market awareness to support better route and load decisions.",
               gradient: "from-[#049468] to-[#06b57a]",
               delay: 0.1
             },
             { 
-              icon: Users, 
+              image: "https://images.unsplash.com/photo-1521791136064-7986c2920216?w=800&h=600&fit=crop",
               title: "Partnership", 
               desc: "We work as an extension of your carrier operation, not just another vendor.",
               gradient: "from-[#049468] to-[#06b57a]",
               delay: 0.2
             },
             { 
-              icon: Award, 
+              image: "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&h=600&fit=crop",
               title: "Excellence", 
               desc: "Committed to professional communication, clean records, and dependable follow-through.",
               gradient: "from-[#049468] to-[#06b57a]",
@@ -108,24 +107,31 @@ export default function CoreValues() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: value.delay }}
-              className="group relative bg-black/40 backdrop-blur-sm rounded-2xl p-8 border border-gray-800 hover:border-[#049468]/50 transition-all duration-500 hover:shadow-2xl hover:shadow-[#049468]/10 text-center"
+              className="group relative bg-black/40 backdrop-blur-sm rounded-2xl overflow-hidden border border-gray-800 hover:border-[#049468]/50 transition-all duration-500 hover:shadow-2xl hover:shadow-[#049468]/10"
             >
               {/* Glow Effect on Hover */}
               <div className={`absolute inset-0 bg-gradient-to-br ${value.gradient} opacity-0 group-hover:opacity-5 rounded-2xl transition-opacity duration-500`} />
               
-              {/* Icon Container */}
-              <div className="relative w-20 h-20 mx-auto mb-6">
-                <div className={`w-20 h-20 bg-gradient-to-br ${value.gradient} rounded-2xl flex items-center justify-center relative z-10 group-hover:scale-110 transition-all duration-500 shadow-lg group-hover:shadow-xl`}>
-                  <value.icon className="w-10 h-10 text-white" />
-                </div>
+              {/* Image - Full width on top */}
+              <div className="relative w-full h-56 overflow-hidden">
+                <img 
+                  src={value.image} 
+                  alt={value.title}
+                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                />
+                {/* Bottom Gradient for text readability */}
+                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
               </div>
               
-              <h3 className="text-xl font-bold text-white mb-3 group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-[#049468] group-hover:to-[#06b57a] transition-all duration-300">
-                {value.title}
-              </h3>
-              <p className="text-gray-400 leading-relaxed group-hover:text-gray-300 transition-colors duration-300">
-                {value.desc}
-              </p>
+              {/* Content */}
+              <div className="p-6 relative">
+                <h3 className="text-xl font-bold text-white mb-3 group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-[#049468] group-hover:to-[#06b57a] transition-all duration-300">
+                  {value.title}
+                </h3>
+                <p className="text-gray-400 leading-relaxed group-hover:text-gray-300 transition-colors duration-300">
+                  {value.desc}
+                </p>
+              </div>
               
               {/* Decorative Corner Elements */}
               <div className={`absolute -top-px -right-px w-20 h-20 bg-gradient-to-br ${value.gradient} opacity-0 group-hover:opacity-20 rounded-tr-2xl transition-opacity duration-500 blur-xl`} />

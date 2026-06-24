@@ -10,7 +10,7 @@ export const metadata: Metadata = {
 
 export default function ContactPage() {
   const contactDetails = [
-    { icon: Mail, label: "Email", value: "hroxdispatchers@gmail.com", href: "mailto:hroxdispatchers@gmail.com" },
+    { icon: Mail, label: "Email", value: "hroxlogistics@gmail.com", href: "mailto:hroxlogistics@gmail.com" },
     { icon: Phone, label: "Phone", value: "516 500 0175", href: "tel:+15551234567" },
     { icon: Clock, label: "Business Hours", value: "24/7" },
     { icon: MapPin, label: "Location", value: "1309 Coffeen Avenue STE 1200, Sheridan, Wyoming 82801" },

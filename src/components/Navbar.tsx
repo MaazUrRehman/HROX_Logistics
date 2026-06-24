@@ -57,7 +57,7 @@ export default function Navbar() {
                 className="flex items-center gap-2 hover:text-[#049468] transition-colors text-white font-semibold text-sm"
               >
                 <Mail className="h-3.5 w-3.5" />
-                <span>hroxdispatchers@gmail.com</span>
+                <span>hroxlogistics@gmail.com</span>
               </a>
               <a
                 href="tel:+1234567890"

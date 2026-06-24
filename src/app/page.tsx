@@ -14,13 +14,12 @@ export default function Home() {
     <div className="flex flex-col min-h-screen">
       <Hero />
       <HomeAbout />
-      <DispatcherKnowledge />
+      {/* <DispatcherKnowledge /> */}
       <TruckOperations />
       <Features />
       <HomeServices />
       <HomeProcess />
-      <HomeIndustries />
-      <StatsCTA />
+      {/* <HomeIndustries /> */}
       <HomeFAQ />
     </div>
   );

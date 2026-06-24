@@ -73,7 +73,7 @@ export default function HomeIndustries() {
                 Your Sector
               </span>
             </motion.h2>
-            <p className="text-gray-400">Industry-specific dispatch support with proven expertise</p>
+            <p className="text-gray-400">Industry-specific dispatch expertise for every freight type</p>
           </div>
           <div className="flex items-center gap-4 text-sm text-gray-500">
             <div className="flex items-center gap-2">
@@ -118,7 +118,6 @@ export default function HomeIndustries() {
                   <p className="text-gray-400 text-sm leading-relaxed opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-100 line-clamp-2">
                     {industry.desc}
                   </p>
-                  {/* Added: Industry stats */}
                   <div className="mt-2 opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-150">
                     <span className="text-xs text-[#049468] bg-[#049468]/20 px-3 py-1 rounded-full">
                       {industry.stats}
@@ -134,7 +133,7 @@ export default function HomeIndustries() {
           ))}
         </div>
 
-        {/* Added: Industry Knowledge Footer */}
+        {/* Industry Knowledge Footer */}
         <motion.div 
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}

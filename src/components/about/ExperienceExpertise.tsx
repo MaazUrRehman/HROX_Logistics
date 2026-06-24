@@ -138,7 +138,7 @@ export default function ExperienceExpertise() {
                 transition={{ duration: 0.3 }}
               >
                 <img 
-                  src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80"
+                  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRQzKUkHex4BWCXLkaNhaeMnj57ZcOm8u2eFw&sZ"
                   alt="Professional truck dispatch team"
                   className="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-700"
                 />

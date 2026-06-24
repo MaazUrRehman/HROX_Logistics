@@ -325,7 +325,7 @@ export default function Footer() {
               >
                 <Mail className="h-5 w-5 text-[#049468] shrink-0 transition-colors group-hover:text-[#06b57a]" />
                 <span className="text-gray-300 group-hover:text-[#049468] transition-colors">
-                  hroxdispatchers@gmail.com
+                  hroxlogistics@gmail.com
                 </span>
               </motion.li>
               <motion.li

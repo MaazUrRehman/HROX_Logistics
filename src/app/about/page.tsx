@@ -14,12 +14,12 @@ export default function AboutPage() {
       <AboutHeader />
       <CompanyIntro />
       <DispatcherGuidance />
-      <CarrierTruckInsight />
-      <BusinessValues />
-      <OurStory />
       <CoreValues />
+      <CarrierTruckInsight />
+      <OurStory />
+      <BusinessValues />
       <ExperienceExpertise />
-      <AboutCTA />
+      {/* <AboutCTA /> */}
     </div>
   );
 }

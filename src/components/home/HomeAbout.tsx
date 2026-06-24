@@ -28,7 +28,7 @@ export default function HomeAbout() {
             
             <div className="relative z-10 rounded-2xl overflow-hidden shadow-2xl border-4 border-[#049468]/20">
               <img 
-                src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" 
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTWKvlDq42YRuras8tQvzScqBkFSs85ao8PwQ&s" 
                 alt="Truck dispatch operations" 
                 className="w-full h-auto object-cover hover:scale-105 transition-transform duration-700"
               />
@@ -64,7 +64,7 @@ export default function HomeAbout() {
                 transition={{ delay: 0.3, duration: 0.5 }}
                 className="text-lg text-gray-300 leading-relaxed font-semibold"
               >
-                HROX Dispatchers gives carriers dependable back-office dispatch support built around load coordination, rate communication, paperwork follow-up, and practical trucking operations.
+                HROX Dispatchers gives carriers dependable back-office dispatch support built around load coordination, rate negotiation, paperwork follow-up, and practical trucking operations.
               </motion.p>
             </div>
             
@@ -97,11 +97,11 @@ export default function HomeAbout() {
               ))}
             </motion.ul>
 
-            {/* Added: Quick Industry Stats */}
+            {/* Quick Industry Stats */}
             <div className="grid grid-cols-3 gap-3 pt-4">
               {[
-                { icon: Fuel, value: "8%", label: "Fuel Cost Drop" },
-                { icon: Wrench, value: "12%", label: "Fleet Growth" },
+                { icon: Fuel, value: "8%", label: "Fuel Cost Savings" },
+                { icon: Wrench, value: "12%", label: "Fleet Growth Rate" },
                 { icon: DollarSign, value: "$2.85", label: "Avg Dry Van RPM" }
               ].map((stat, idx) => (
                 <div key={idx} className="text-center p-2 bg-black/30 rounded-lg border border-gray-800/30">
@@ -119,13 +119,6 @@ export default function HomeAbout() {
               transition={{ delay: 0.6, duration: 0.5 }}
               className="pt-4"
             >
-              <Link 
-                href="/about" 
-                className="group inline-flex items-center gap-2 bg-gradient-to-r from-[#049468] to-[#06b57a] hover:from-[#038a5a] hover:to-[#049468] text-white px-8 py-3.5 rounded-xl font-bold transition-all duration-300 shadow-lg hover:shadow-xl hover:shadow-[#049468]/30"
-              >
-                Discover Our Story 
-                <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-              </Link>
             </motion.div>
           </motion.div>
 

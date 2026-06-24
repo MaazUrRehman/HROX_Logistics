@@ -7,26 +7,26 @@ const processSteps = [
   {
     num: "01",
     icon: ClipboardList,
-    title: "Carrier Onboarding",
-    desc: "We review your authority, equipment, preferred lanes, documents, and weekly dispatch goals. Complete setup in 24-48 hours."
+    title: "Submit Your Information",
+    desc: "Provide your basic details, truck information, and operating preferences so we can match you with the best freight opportunities."
   },
   {
     num: "02",
     icon: PackageSearch,
-    title: "Load Search",
-    desc: "Our dispatch team screens load opportunities from 50+ brokers, reviews requirements, and communicates rates with you in real-time."
+    title: "Sign Dispatch Agreement",
+    desc: "Review and sign a simple agreement that allows our team to represent you and start finding profitable loads on your behalf."
   },
   {
     num: "03",
-    icon: Truck,
-    title: "Dispatch Coordination",
-    desc: "We support appointment details, check calls, driver updates, and broker communication. 24/7 active load monitoring included."
+    icon: Box,
+    title: "Complete Carrier Packet",
+    desc: "Fill out the required carrier setup documents so we can onboard your business with brokers and load boards seamlessly."
   },
   {
     num: "04",
-    icon: Box,
-    title: "Paperwork Follow-Up",
-    desc: "We help organize PODs, rate confirmations, accessorial notes, and billing-ready records. Complete documentation within 24 hours."
+    icon: Truck,
+    title: "Start Receiving Loads",
+    desc: "Once everything is set up, our dispatch team begins booking loads for you so you can stay on the road and maximize your earnings."
   }
 ];
 
@@ -37,9 +37,9 @@ export default function HomeProcess() {
       
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="text-center mb-16">
-          <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#049468] to-[#06b57a] font-bold tracking-wider uppercase text-sm">How We Operate</span>
-          <h2 className="text-3xl md:text-5xl font-extrabold text-white mt-3">A Seamless Process</h2>
-          <p className="text-gray-400 mt-3 max-w-2xl mx-auto">From onboarding to payment, we handle every step of your dispatch journey</p>
+          <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#049468] to-[#06b57a] font-bold tracking-wider uppercase text-sm">Our Dispatch Process</span>
+          <h2 className="text-3xl md:text-5xl font-extrabold text-white mt-3">From Onboarding to Payment</h2>
+          <p className="text-gray-400 mt-3 max-w-2xl mx-auto">We handle every step of your dispatch journey so you can focus on driving</p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-8">
@@ -67,26 +67,7 @@ export default function HomeProcess() {
           ))}
         </div>
 
-        {/* Added: Quick Tips Section */}
-        <motion.div 
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ delay: 0.3 }}
-          className="mt-16 grid grid-cols-1 md:grid-cols-3 gap-4"
-        >
-          {[
-            { icon: FileCheck, title: "Paperwork Ready", desc: "All documents organized for quick access" },
-            { icon: TrendingUp, title: "Rate Optimization", desc: "Market analysis for best RPM" },
-            { icon: Shield, title: "Compliance First", desc: "Always DOT and FMCSA compliant" }
-          ].map((tip, idx) => (
-            <div key={idx} className="bg-black/30 border border-gray-800/30 rounded-xl p-4 text-center hover:border-[#049468]/30 transition-colors">
-              <tip.icon className="w-5 h-5 text-[#049468] mx-auto mb-2" />
-              <h4 className="text-white font-semibold text-sm">{tip.title}</h4>
-              <p className="text-gray-500 text-xs mt-1">{tip.desc}</p>
-            </div>
-          ))}
-        </motion.div>
+     
       </div>
     </section>
   );

@@ -15,7 +15,7 @@ export default function DispatcherKnowledge() {
             viewport={{ once: true }}
             className="text-[#06b57a] uppercase tracking-[0.35em] text-xs font-semibold"
           >
-            Dispatcher Knowledge
+            Dispatch Expertise
           </motion.span>
           <motion.h2
             initial={{ opacity: 0, y: 20 }}
@@ -24,7 +24,7 @@ export default function DispatcherKnowledge() {
             transition={{ delay: 0.1 }}
             className="text-3xl md:text-5xl font-extrabold text-white mt-4"
           >
-            Truck Dispatch Insight That Keeps Loads Moving
+            Smart Dispatching That Keeps Your Fleet Profitable
           </motion.h2>
           <motion.p
             initial={{ opacity: 0, y: 20 }}
@@ -33,8 +33,8 @@ export default function DispatcherKnowledge() {
             transition={{ delay: 0.2 }}
             className="text-gray-400 max-w-3xl mx-auto mt-4 leading-relaxed"
           >
-            Our dispatcher-first approach turns carrier needs into clear load plans, deadline-aware checkpoints,
-            and practical truck-ready action items for every load.
+            Our experienced dispatch team works around the clock to secure quality loads, 
+            negotiate the best rates, and provide reliable support every step of the journey.
           </motion.p>
         </div>
 
@@ -42,18 +42,18 @@ export default function DispatcherKnowledge() {
           {[
             {
               icon: Truck,
-              title: "Carrier-Focused Load Planning",
-              text: "Match equipment, lane, and driver availability to secure the best freight for your truckline."
+              title: "24/7 Load Sourcing",
+              text: "We work tirelessly to find profitable freight opportunities while reducing downtime for owner-operators and trucking companies."
             },
             {
               icon: Clock,
-              title: "Check-Call Discipline",
-              text: "Timely pick-up and delivery updates, appointment windows, and real-world truck stop timing."
+              title: "Real-Time Updates",
+              text: "Timely pick-up and delivery communication, appointment confirmations, and active load tracking to keep you informed."
             },
             {
               icon: FileText,
-              title: "Paperwork & Rate Clarity",
-              text: "Transparent load confirmations, accessorial notes, and dispatch files so drivers know what to expect."
+              title: "Rate Negotiation & Paperwork",
+              text: "Transparent load confirmations, accessorial notes, and dispatch documentation so you know exactly what to expect."
             }
           ].map((card, index) => (
             <motion.div
